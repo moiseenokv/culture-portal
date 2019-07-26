@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "culture-portal",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Culture portal of belarusian writers",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vitai Maisiayonak <moiseenokv@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.13.39",
@@ -18,7 +18,7 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -34,7 +34,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
