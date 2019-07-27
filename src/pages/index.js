@@ -7,7 +7,7 @@ import '../styles/main.css'
 
 const Main = () => {
 
-  const { Content, Footer } = Layer;
+  const { Content } = Layer;
   return (
     <div>
       <Layout path={window.location.pathname}>
@@ -43,17 +43,6 @@ const Main = () => {
               </Layer>
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
-            <div>Разработчики</div>
-            <Row className="contacts">
-              <Col span={4}><a href='https://github.com/eugenio7779' rel="noopener noreferrer" target='_blank'>eugenio7779</a></Col>
-              <Col span={4}><a href='https://github.com/georgpandeh' rel="noopener noreferrer" target='_blank'>georgpandeh</a></Col>
-              <Col span={4}><a href='https://github.com/venul' rel="noopener noreferrer" target='_blank'>venul</a></Col>
-              <Col span={4}><a href='https://github.com/moiseenokv' rel="noopener noreferrer" target='_blank'>moiseenokv</a></Col>
-              <Col span={4}><a href='https://github.com/annakiniova' rel="noopener noreferrer" target='_blank'>annakiniova</a></Col>
-              <Col span={4}><a href='https://github.com/yevgeniyaa' rel="noopener noreferrer" target='_blank'>yevgeniyaa</a></Col>
-            </Row>
-          </Footer>
         </Layer>
       </Layout>
     </div>

@@ -29,15 +29,15 @@ h3 {
   font-size: 2vw;
 }
 
-.contacts {
+.developers {
   height: 50px;
 }
 
-.contacts .ant-col-4 {
+.developers .ant-col-4 {
   margin-top: 10px;
 }
 
-.contacts a {
+.developers a {
   color: black;
   text-decoration: none;
   cursor: pointer;
