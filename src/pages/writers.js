@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import { Layout as Layer, Divider } from 'antd';
-import Layout from '../components/layout';
+import { Layout, Divider } from 'antd';
+import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
 
@@ -49,10 +49,10 @@ class Writers extends Component {
 
   render() {
     const { search } = this.state;
-    const { Content } = Layer;
+    const { Content } = Layout;
     return (
       <div>
-        <Layout path={window.location.pathname}>
+        <Layer path='/writers'>
             <Content style={{ padding: '0 50px' }}>
               <h1>Writers</h1>
               <input
@@ -62,7 +62,7 @@ class Writers extends Component {
               />
               {search.map(this.list)}
             </Content>
-        </Layout>
+        </Layer>
       </div>
     )
   }
