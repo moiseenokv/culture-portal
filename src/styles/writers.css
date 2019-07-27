@@ -1,3 +1,14 @@
 .list-of-writers {
   margin-left: 10px;
+  margin-top: 10px;
+}
+
+.search {
+  width: 100%;
+  padding-left: 10px;
+  height: 40px;
+}
+
+.search:focus {
+  border-color: rgba(0, 89, 255, 0.514);
 }
