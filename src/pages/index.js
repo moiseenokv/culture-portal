@@ -1,21 +1,63 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import Layout from '../components/layout';
+import { Layout as Layer, Divider, Row, Col } from 'antd';
+import Korotkevich from '../images/korotkevich.jpg'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import '../styles/main.css'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const Main = () => {
+
+  const { Content, Footer } = Layer;
+  return (
+    <div>
+      <Layout path={window.location.pathname}>
+        <Layer className="layout">
+          <Content style={{ padding: '0 50px' }}>
+            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+              <h1>Писатели Беларуси</h1>
+              <p className="writers-about">Белорусская литература условно делится на несколько периодов: «Давняя (древняя)
+                белорусская литература» (ХI—ХVІІ вв.), «Новая беларуская литература» (перв.пол. XVIII—ХІХ в.в.)
+                , и «Новейшая белорусская литература» (литература от начала ХХ в.). Литература первой половины
+                XVIII в. определяется как «Литература переходного периода» — время, когда формировались основы
+                новой поэтики. Литература второй половины XVIII ст. – первой четверти ХІХ ст. именуется как
+                «Литература эпохи Просветительства». Белорусскую литературу от середины 20-х гг. до конца ХІХ в.
+                воодушевляла романтичная мысль про национальное Возрождение. Романтичный пафос
+                этого этапа предопределяет и его название — «Литература эпохи романтизма».
+              </p>
+              <Divider />
+              <h2 className='author-of-the-day'>Автор дня</h2>
+              <Layer className="layout">
+                <Row type="flex" justify="center">
+                  <Col span={4} className='author-of-the-day-img'>
+                    <img alt='Короткевич' src={Korotkevich} />
+                  </Col>
+                  <Col span={16} offset={1}>
+                    <h3>Короткевич, Владимир Семёнович</h3>
+                    <p className="life-dates" >26 ноября 1930 - 25 июля 1984 (53 года)</p>
+                    <p>Белорусский советский писатель, поэт, драматург, сценарист и публицист, классик белорусской
+                      литературы. Является одной из наиболее ярких фигур в белорусской литературе XX столетия.
+                      Стал первым белорусским писателем, обратившимся к жанру исторического детектива.
+                    </p>
+                  </Col>
+                </Row>
+              </Layer>
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            <div>Разработчики</div>
+            <Row className="contacts">
+              <Col span={4}><a href='https://github.com/eugenio7779' rel="noopener noreferrer" target='_blank'>eugenio7779</a></Col>
+              <Col span={4}><a href='https://github.com/georgpandeh' rel="noopener noreferrer" target='_blank'>georgpandeh</a></Col>
+              <Col span={4}><a href='https://github.com/venul' rel="noopener noreferrer" target='_blank'>venul</a></Col>
+              <Col span={4}><a href='https://github.com/moiseenokv' rel="noopener noreferrer" target='_blank'>moiseenokv</a></Col>
+              <Col span={4}><a href='https://github.com/annakiniova' rel="noopener noreferrer" target='_blank'>annakiniova</a></Col>
+              <Col span={4}><a href='https://github.com/yevgeniyaa' rel="noopener noreferrer" target='_blank'>yevgeniyaa</a></Col>
+            </Row>
+          </Footer>
+        </Layer>
+      </Layout>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  )
+}
 
-export default IndexPage
+export default Main;
