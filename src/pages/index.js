@@ -1,17 +1,17 @@
 import React from 'react';
-import Layout from '../components/layout';
-import { Layout as Layer, Divider, Row, Col } from 'antd';
+import Layer from '../components/layer';
+import { Layout, Divider, Row, Col } from 'antd';
 import Korotkevich from '../images/korotkevich.jpg'
 
 import '../styles/main.css'
 
 const Main = () => {
 
-  const { Content } = Layer;
+  const { Content } = Layout;
   return (
     <div>
-      <Layout path={window.location.pathname}>
-        <Layer className="layout">
+      <Layer path='/'>
+        <Layout className="layout">
           <Content style={{ padding: '0 50px' }}>
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
               <h1>Писатели Беларуси</h1>
@@ -26,7 +26,7 @@ const Main = () => {
               </p>
               <Divider />
               <h2 className='author-of-the-day'>Автор дня</h2>
-              <Layer className="layout">
+              <Layout className="layout">
                 <Row type="flex" justify="center">
                   <Col span={4} className='author-of-the-day-img'>
                     <img alt='Короткевич' src={Korotkevich} />
@@ -40,11 +40,11 @@ const Main = () => {
                     </p>
                   </Col>
                 </Row>
-              </Layer>
+              </Layout>
             </div>
           </Content>
-        </Layer>
-      </Layout>
+        </Layout>
+      </Layer>
     </div>
   )
 }

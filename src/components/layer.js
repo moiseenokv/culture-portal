@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from './header'
-import { Layout as Layer, Row, Col } from 'antd';
+import { Layout, Row, Col } from 'antd';
 
 import '../styles/layout.css'
 
-const Layout = ({ children, path }) => {
-  const { Footer } = Layer;
+const Layer = ({ children, path }) => {
+  const { Footer } = Layout;
   return (
   <div>
     <Header path={path} />
@@ -25,4 +25,4 @@ const Layout = ({ children, path }) => {
   )
 }
 
-export default Layout
+export default Layer
