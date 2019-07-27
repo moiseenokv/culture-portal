@@ -9,6 +9,4 @@ const Layout = ({ children, path }) => (
   </div>
 )
 
-
-
 export default Layout
