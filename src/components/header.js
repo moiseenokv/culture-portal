@@ -1,42 +1,52 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import React, { Component } from 'react';
+import { Layout, Menu, Select, Col, Row } from 'antd';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import '../styles/header.css';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedKeyPath: props.path,
+    }
+  }
+ 
+  handleChange = (e) => {
+    console.log(`selected ${e}`);
+  }
+  
+  render() {
+    const { Option } = Select;
+    return (
+      <div>
+        <Layout className="layout">
+          <Layout.Header>
+            <Row>
+              <Col span={4}>
+                <Select defaultValue="ru" style={{ width: 60 }} onChange={this.handleChange}>
+                  <Option value="en">en</Option>
+                  <Option value="ru">ru</Option>
+                  <Option value="by">by</Option>
+                </Select>
+              </Col>
+              <Col span={20}>
+                <Menu
+                  theme="dark"
+                  mode="horizontal"
+                  defaultSelectedKeys={[this.state.selectedKeyPath]}
+                  style={{ lineHeight: '64px' }}
+                >
+                  <Menu.Item key="/"><Link to='/'>На Главную</Link></Menu.Item>
+                  <Menu.Item key="/writers"><Link to='/writers'>Писатели</Link></Menu.Item>
+                </Menu>
+              </Col>
+            </Row>
+          </Layout.Header>
+        </Layout>
+      </div>
+    )
+  }
 }
 
 export default Header
