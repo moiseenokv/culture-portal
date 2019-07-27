@@ -1,0 +1,44 @@
+.writers-about {
+  font-size: 18px;
+}
+
+.author-of-the-day {
+  text-align: center;
+}
+
+.author-of-the-day-img {
+  text-align: center;
+}
+
+.author-of-the-day-img img {
+  height: 100%;
+  margin: 0;
+}
+
+.life-dates {
+  font-size: 1.2vw;
+  color: gray;
+}
+
+.life-dates + p {
+  font-size: 1.5vw;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 2vw;
+}
+
+.contacts {
+  height: 50px;
+}
+
+.contacts .ant-col-4 {
+  margin-top: 10px;
+}
+
+.contacts a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
