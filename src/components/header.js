@@ -17,7 +17,7 @@ class Header extends Component {
   }
 
   selectDefaultPath = () => {
-    if (this.state.selectedKeyPath === ('/' || '/writers')) {
+    if (this.state.selectedKeyPath !== ('/' || '/writers')) {
       return this.state.selectedKeyPath;
     } else return '/';
   }
@@ -55,4 +55,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default Header;

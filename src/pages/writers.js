@@ -1,16 +1,65 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
+import { Layout as Layer, Input, List } from 'antd';
+import Layout from '../components/layout';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import '../styles/writers.css';
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+const data = [
+  {
+    name: 'Быков, Дмитрий Львович',
+    description: 'smth',
+  },
+  {
+    name: 'Короткевич, Владимир Семёнович',
+    description: 'smth',
+  },
+  {
+    name: 'Шамякин, Иван Петрович',
+    description: 'smth',
+  },
+  {
+    name: 'Михайлович, Александр Адамович',
+    description: 'smth',
+  },
+  {
+    name: 'Алексиевич, Светлана Александровна',
+    description: 'smth',
+  },
+];
+
+const { Search } = Input;
+const { Content } = Layer;
+
+const Writers = () => (
+  <div>
+    <Layout path={window.location.pathname}>
+      <Content style={{ padding: '0 50px' }}>
+        <Layer className="layout">
+          <h1>Writers</h1>
+          <Search
+            placeholder="input search writer"
+            enterButton="Search"
+            size="large"
+            onSearch={value => console.log(value)}
+          />
+          <List
+            itemLayout="horizontal"
+            className="list-of-writers"
+            dataSource={data}
+            renderItem={item => (
+              <List.Item>
+                <List.Item.Meta
+                  title={<Link to="/">{item.name}</Link>}
+                  description={item.description}
+                />
+              </List.Item>
+            )}
+          />
+        </Layer>
+      </Content>
+    </Layout>
+  </div>
 )
 
-export default SecondPage
+export default Writers;
