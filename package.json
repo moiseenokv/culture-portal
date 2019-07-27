@@ -23,6 +23,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
   },
