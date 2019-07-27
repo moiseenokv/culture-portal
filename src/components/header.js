@@ -15,6 +15,12 @@ class Header extends Component {
   handleChange = (e) => {
     console.log(`selected ${e}`);
   }
+
+  selectDefaultPath = () => {
+    if (this.state.selectedKeyPath === ('/' || '/writers')) {
+      return this.state.selectedKeyPath;
+    } else return '/';
+  }
   
   render() {
     const { Option } = Select;
@@ -34,7 +40,7 @@ class Header extends Component {
                 <Menu
                   theme="dark"
                   mode="horizontal"
-                  defaultSelectedKeys={[this.state.selectedKeyPath]}
+                  defaultSelectedKeys={[this.selectDefaultPath()]}
                   style={{ lineHeight: '64px' }}
                 >
                   <Menu.Item key="/"><Link to='/'>На Главную</Link></Menu.Item>
