@@ -1,0 +1,26 @@
+.developer-card {
+    border: 1px solid rgb(180, 174, 174);
+    background: rgb(173, 173, 184);
+}
+
+.developer-card:hover {
+    background: rgb(149, 149, 156);
+}
+
+.developer-card p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(23, 2, 139);
+}
+
+.developer-card img {
+    width: 150px;
+    height: 150px;
+}
+
+.github img {
+    width: 50px;
+    height: 50px;
+}
+
