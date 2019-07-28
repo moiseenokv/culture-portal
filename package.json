@@ -45,7 +45,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "lint": "eslint --fix --ext .js"
+    "lint": "eslint ./src/**/*.js --fix"
   },
   "repository": {
     "type": "git",
