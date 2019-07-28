@@ -21,5 +21,6 @@
         "react"
     ],
     "rules": {
-    }
+    },
+    "extends": "airbnb"
 }
