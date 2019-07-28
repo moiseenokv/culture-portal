@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Layout, Menu, Select, Col, Row } from 'antd';
 
@@ -10,10 +11,6 @@ class Header extends Component {
     this.state = {
       selectedKeyPath: props.path,
     }
-  }
- 
-  handleChange = (e) => {
-    console.log(`selected ${e}`);
   }
 
   selectDefaultPath = () => {
@@ -55,5 +52,9 @@ class Header extends Component {
     )
   }
 }
+
+Header.propTypes = {
+  path: PropTypes.string
+};
 
 export default Header;

@@ -1,8 +1,9 @@
-import React from 'react'
-import Header from './header'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from './header';
 import { Layout, Row, Col } from 'antd';
 
-import '../styles/layout.css'
+import '../styles/layout.css';
 
 const Layer = ({ children, path }) => {
   const { Footer } = Layout;
@@ -25,4 +26,9 @@ const Layer = ({ children, path }) => {
   )
 }
 
-export default Layer
+Layer.propTypes = {
+  children: PropTypes.string,
+  path: PropTypes.string,
+};
+
+export default Layer;
