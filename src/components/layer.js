@@ -1,5 +1,6 @@
-import React from 'react'
-import Header from './header'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from './header';
 import { Layout, Row, Col } from 'antd';
 import user from '../images/user.jpg';
 import github from '../images/github.png';
@@ -88,4 +89,9 @@ const Layer = ({ children, path }) => {
   )
 }
 
-export default Layer
+Layer.propTypes = {
+  children: PropTypes.node,
+  path: PropTypes.string,
+};
+
+export default Layer;
