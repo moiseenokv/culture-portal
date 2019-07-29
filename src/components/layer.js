@@ -4,8 +4,8 @@ import Header from './header';
 import { Layout, Row, Col } from 'antd';
 import github from '../images/github.png';
 
-import '../styles/layout.css'
-import '../styles/developers.css'
+import '../styles/layout.css';
+import '../styles/developers.css';
 
 const Layer = ({ children, path }) => {
   const { Footer } = Layout;
