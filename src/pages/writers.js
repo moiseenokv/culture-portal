@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 import { Layout, Divider } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
