@@ -27,7 +27,7 @@ const Layer = ({ children, path }) => {
 }
 
 Layer.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   path: PropTypes.string,
 };
 
