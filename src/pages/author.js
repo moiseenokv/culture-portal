@@ -15,23 +15,25 @@ const AuthorPage = () => {
       <Layer path='/'>
         <Layout className="layout">
           <Content style={{ padding: '0 50px', margin: '0 auto', textAlign: 'center' }}>
-            <img alt="имя" src=""/>
-            <h2>имя</h2>
-            <h3>годы жизни</h3>
-            <Row type="flex" justify="space-around">
-              <Col span={14}>описание описание описание описание описание описание описание описание описание
-                описание описание описание описание описание описание описание описание описание описание
-              </Col>
-            </Row>
-            <Divider/>
-            <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
-            <Divider/>
-            <TimeLine/>
-            <Divider/>
-            <div className='gallery'>
-              <Gallery/>
+            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+              <img alt="фото" src=""/>
+              <h2>имя</h2>
+              <h3>годы жизни</h3>
+              <Row type="flex" justify="space-around">
+                <Col span={14}>описание описание описание описание описание описание описание описание описание
+                  описание описание описание описание описание описание описание описание описание описание
+                </Col>
+              </Row>
+              <Divider/>
+              <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
+              <Divider/>
+              <TimeLine/>
+              <Divider/>
+              <div className='gallery'>
+                <Gallery/>
+              </div>
+              <Divider/>
             </div>
-            <Divider/>
           </Content>
         </Layout>
       </Layer>

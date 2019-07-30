@@ -2,7 +2,8 @@ import React from 'react';
 import { Carousel } from 'antd';
 import Korotkevich from '../images/korotkevich.jpg';
 import sea from '../images/sea.jpg';
-import astronaut from '../images/gatsby-astronaut.png'
+import astronaut from '../images/gatsby-astronaut.png';
+
 const Gallery = () => {
   return (
     <Carousel style={{height: '250px', width: '500px'}}>

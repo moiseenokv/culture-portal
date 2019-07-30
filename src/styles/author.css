@@ -1,6 +1,7 @@
 .gallery {
   width: 500px;
   margin: 0 auto;
+  background-color: #364d79;
 }
 
 .gallery img {
