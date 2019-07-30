@@ -3,6 +3,9 @@ import Layer from '../components/layer';
 import { Layout, Divider, Row, Col } from 'antd';
 import MyMap from '../components/mapWidget';
 import TimeLine from '../components/timeLine';
+import Gallery from '../components/gallery';
+
+import '../styles/author.css';
 
 const AuthorPage = () => {
 
@@ -23,7 +26,12 @@ const AuthorPage = () => {
             <Divider/>
             <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
             <Divider/>
-            <TimeLine />
+            <TimeLine/>
+            <Divider/>
+            <div className='gallery'>
+              <Gallery/>
+            </div>
+            <Divider/>
           </Content>
         </Layout>
       </Layer>
