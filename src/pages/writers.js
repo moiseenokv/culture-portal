@@ -20,6 +20,7 @@ class Writers extends Component {
   list = (item, i) => {
     return (
       <div key={i}>
+        <img src={item.photo} alt={item.name}></img>
         <div>{item.name}</div>
         <div>Место Рождения: {item.placeOfBirth}</div>
         <div>{item.description}</div>
