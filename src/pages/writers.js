@@ -21,7 +21,7 @@ class Writers extends Component {
           <div className="writer-listPage-block">
             {/* TODO: линки на страницу */}
             <img src={item.photo} alt={item.name}></img>
-            <h4 className="writer-name">{item.name}</h4>
+            <h5 className="writer-name">{item.name}</h5>
             <div className="writer-birth-place">Место Рождения: {item.placeOfBirth}</div>
             <p className="writer-description">{item.description}</p>
           </div>
@@ -33,7 +33,7 @@ class Writers extends Component {
   list = () => {
     const { search } = this.state;
     let size = 4; //размер подмассива
-    let subarray = []; //массив в котором будут массивы по 4 элемента.
+    let subarray = []; //подмассив в котором будут массивы по 4 элемента.
 
     for (let i = 0; i < Math.ceil(search.length / size); i += 1) {
       subarray[i] = search.slice((i*size), (i*size) + size);

@@ -28,8 +28,12 @@
   color: #000;
 }
 
-.writer-listPage-block h4 {
+.writer-listPage-block h5 {
+  height: 32px;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .writer-listPage-block p {
@@ -61,4 +65,15 @@
   background: #fff;
   padding: 24px;
   min-height: 280px;
+}
+
+.writer-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+}
+
+.writer-birth-place {
+  height: 42px;
 }
