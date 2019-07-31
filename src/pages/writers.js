@@ -3,6 +3,7 @@ import { Layout, Divider, Col } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
+import { Link } from 'gatsby';
 
 class Writers extends Component {
   constructor() {
@@ -21,14 +22,15 @@ class Writers extends Component {
     return (
       <Col span={5}>
         <div key={i} className="writer-listPage-block">
-          <a href="#">
+          <Link to="/author">
             {/* TODO: линки на страницу */}
             <img src={item.photo} alt={item.name}></img>
             <div className="writer-name">{item.name}</div>
             <div className="writer-birth-place">Место Рождения: {item.placeOfBirth}</div>
             <div className="writer-description">{item.description}</div>
-          </a>
+          </Link>
         </div>
+        <Divider/>
       </Col>
     )
   }
