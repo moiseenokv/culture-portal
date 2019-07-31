@@ -1,8 +1,9 @@
 import React from 'react';
-import Layer from '../components/layer';
 import { Layout, Divider, Row, Col } from 'antd';
 import Korotkevich from '../images/korotkevich.jpg'
 
+import Layer from '../components/layer';
+import Developers from '../components/developers';
 import '../styles/main.css'
 
 const Main = () => {
@@ -41,12 +42,14 @@ const Main = () => {
                   </Col>
                 </Row>
               </Layout>
+              <Divider/>
+              <Developers/>
             </div>
           </Content>
         </Layout>
       </Layer>
     </div>
   )
-}
+};
 
 export default Main;

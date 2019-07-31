@@ -16,8 +16,8 @@ class Writers extends Component {
 
   listOfWriters = (item, i) => {
     return (
-      <Link className="single-writer" to="/author">
-        <Col key={i} span={6}>
+      <Link key={i} className="single-writer" to="/author">
+        <Col span={6}>
           <div className="writer-listPage-block">
             {/* TODO: линки на страницу */}
             <img src={item.photo} alt={item.name}></img>
@@ -33,7 +33,7 @@ class Writers extends Component {
   list = () => {
     const { search } = this.state;
     let size = 4; //размер подмассива
-    let subarray = []; //массив в который будет разделен на подмассивы по 4 элемента.
+    let subarray = []; //массив в котором будут массивы по 4 элемента.
 
     for (let i = 0; i < Math.ceil(search.length / size); i += 1) {
       subarray[i] = search.slice((i*size), (i*size) + size);
