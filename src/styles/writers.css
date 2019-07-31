@@ -12,3 +12,15 @@
 .search:focus {
   border-color: rgba(0, 89, 255, 0.514);
 }
+
+.writer-listPage-block img {
+  width: auto;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.writers-list {
+  margin-top: 15px;
+  display: inline-block;
+  width: 100%;
+}
