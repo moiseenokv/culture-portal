@@ -37,13 +37,13 @@ const AuthorPage = () => {
                 <Gallery/>
               </div>
               <Divider/>
-              <MyVideo url='https://www.youtube.com/embed/vkEscYr-tfU' title="Karatkevich" />
+              <MyVideo url='9iivuWSYhAI' title="Karatkevich" />
               <Divider/>
             </div>
           </Content>
         </Layout>
       </Layer>
-    </div>      
+    </div>
   )
 }
 
