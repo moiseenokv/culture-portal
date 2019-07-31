@@ -1,0 +1,19 @@
+.gallery div {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #364d79;
+}
+
+.gallery button {
+  background: black !important;
+  width: 50px !important;
+}
+
+.gallery img {
+  width: 500px;
+  position: absolute;   
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}

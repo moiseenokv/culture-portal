@@ -43,7 +43,6 @@ class Header extends Component {
                 >
                   <Menu.Item key="/"><Link to='/'>На Главную</Link></Menu.Item>
                   <Menu.Item key="/writers"><Link to='/writers'>Писатели</Link></Menu.Item>
-                  <Menu.Item key="/author"><Link to='/author'>Страница автора</Link></Menu.Item>
                 </Menu>
               </Col>
             </Row>
