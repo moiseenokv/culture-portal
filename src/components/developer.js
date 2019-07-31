@@ -9,13 +9,14 @@ import github from '../images/github.png';
 const Developer = (props) => (
   <Col span={4}>
     <div className="developer-card">
-      <p>{props.name}</p>
-      <img alt={props.name} src={props.avatarSrc}/>
-      <div className="github">
-        <a href={`https://github.com/${props.login}`} rel="noopener noreferrer" target='_blank'>
+      <a href={`https://github.com/${props.login}`} rel="noopener noreferrer" target='_blank'>
+        <p>{props.name}</p>
+        <img alt={props.name} src={props.avatarSrc}/>
+        <div className="github">
           <img alt={props.login} src={github}/>
-        </a>
-      </div>
+          <span>{props.login}</span>
+        </div>
+      </a>
     </div>
   </Col>
 );
