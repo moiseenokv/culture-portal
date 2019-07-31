@@ -5,6 +5,7 @@ import Korotkevich from '../images/korotkevich.jpg'
 import Layer from '../components/layer';
 import Developers from '../components/developers';
 import '../styles/main.css'
+import { Link } from 'gatsby';
 
 const Main = () => {
 
@@ -13,8 +14,8 @@ const Main = () => {
     <div>
       <Layer path='/'>
         <Layout className="layout">
-          <Content style={{ padding: '0 50px' }}>
-            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+          <Content className='content'>
+            <div className='content-wrapper'>
               <h1>Писатели Беларуси</h1>
               <p className="writers-about">Белорусская литература условно делится на несколько периодов: «Давняя (древняя)
                 белорусская литература» (ХI—ХVІІ вв.), «Новая беларуская литература» (перв.пол. XVIII—ХІХ в.в.)
@@ -28,24 +29,27 @@ const Main = () => {
               <Divider />
               <h2 className='author-of-the-day'>Автор дня</h2>
               <Layout className="layout">
-                <Row type="flex" justify="center">
-                  <Col span={4} className='author-of-the-day-img'>
-                    <img alt='Короткевич' src={Korotkevich} />
-                  </Col>
-                  <Col span={16} offset={1}>
-                    <h3>Короткевич, Владимир Семёнович</h3>
-                    <p className="life-dates" >26 ноября 1930 - 25 июля 1984 (53 года)</p>
-                    <p>Белорусский советский писатель, поэт, драматург, сценарист и публицист, классик белорусской
-                      литературы. Является одной из наиболее ярких фигур в белорусской литературе XX столетия.
-                      Стал первым белорусским писателем, обратившимся к жанру исторического детектива.
-                    </p>
-                  </Col>
-                </Row>
+                <Link to='/author'>
+                  <Row type='flex' justify='center'>
+                    <Col span={4}>
+                      <img className='author-of-the-day-img' alt='Короткевич' src={Korotkevich} />
+                    </Col>
+                    <Col span={16} offset={1}>
+                      <h3>Короткевич, Владимир Семёнович</h3>
+                      <p className="life-dates" >26 ноября 1930 - 25 июля 1984 (53 года)</p>
+                      <p>Белорусский советский писатель, поэт, драматург, сценарист и публицист, классик белорусской
+                        литературы. Является одной из наиболее ярких фигур в белорусской литературе XX столетия.
+                        Стал первым белорусским писателем, обратившимся к жанру исторического детектива.
+                      </p>
+                    </Col>
+                  </Row>
+                </Link>
               </Layout>
+              <Divider/>
+              <Developers/>
             </div>
           </Content>
         </Layout>
-        <Developers/>
       </Layer>
     </div>
   )

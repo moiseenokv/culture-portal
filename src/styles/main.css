@@ -7,17 +7,13 @@
 }
 
 .author-of-the-day-img {
-  text-align: center;
-}
-
-.author-of-the-day-img img {
   height: 100%;
   margin: 0;
 }
 
 .life-dates {
   font-size: 1.2vw;
-  color: gray;
+  color: #808080;
 }
 
 .life-dates + p {
@@ -29,4 +25,17 @@ h3 {
   font-size: 2vw;
 }
 
+.content {
+  padding: 0 50px;
+}
 
+.content-wrapper {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+.layout a {
+  text-decoration: none;
+  color: #000;
+}
