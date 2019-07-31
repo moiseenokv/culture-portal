@@ -1,10 +1,12 @@
 .developer-card {
     border: 1px solid rgb(180, 174, 174);
-    background: rgb(173, 173, 184);
+    background: rgb(205, 216, 211);
 }
 
 .developer-card:hover {
     background: rgb(149, 149, 156);
+    transition: 0.5s;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .developer-card p {
@@ -22,9 +24,30 @@
 .github img {
     width: 50px;
     height: 50px;
+    margin: 0;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .developers-header {
     font-size: 24px;
     font-weight: bold;
+}
+
+.developers .ant-col-4 {
+    margin-top: 10px;
+}
+
+.developers a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.developers > div {
+    padding: 0 5px;
 }

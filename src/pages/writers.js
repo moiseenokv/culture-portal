@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Divider } from 'antd';
+import { Layout, Divider, Col } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
@@ -19,12 +19,17 @@ class Writers extends Component {
 
   list = (item, i) => {
     return (
-      <div key={i}>
-        <div>{item.name}</div>
-        <div>Место Рождения: {item.placeOfBirth}</div>
-        <div>{item.description}</div>
-        <Divider/>
-      </div>
+      <Col span={5}>
+        <div key={i} className="writer-listPage-block">
+          <a href="#">
+            {/* TODO: линки на страницу */}
+            <img src={item.photo} alt={item.name}></img>
+            <div className="writer-name">{item.name}</div>
+            <div className="writer-birth-place">Место Рождения: {item.placeOfBirth}</div>
+            <div className="writer-description">{item.description}</div>
+          </a>
+        </div>
+      </Col>
     )
   }
 
@@ -59,7 +64,9 @@ class Writers extends Component {
                 placeholder='search by name and place of birth'
                 onChange={this.handleSearch}
               />
-              {search.map(this.list)}
+              <div className="writers-list">
+                {search.map(this.list)}
+              </div>
             </Content>
         </Layer>
       </div>

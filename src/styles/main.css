@@ -29,17 +29,4 @@ h3 {
   font-size: 2vw;
 }
 
-.developers {
-  height: 50px;
-}
-
-.developers .ant-col-4 {
-  margin-top: 10px;
-}
-
-.developers a {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
