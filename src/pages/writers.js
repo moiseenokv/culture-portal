@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Layout, Divider, Col } from 'antd';
+import { Layout, Divider, Col, Row } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
+import { Link } from 'gatsby';
 
 class Writers extends Component {
   constructor() {
@@ -13,24 +14,41 @@ class Writers extends Component {
     }
   }
 
-  data = () => {
-    
-  }
-
-  list = (item, i) => {
+  listOfWriters = (item, i) => {
     return (
-      <Col span={5}>
-        <div key={i} className="writer-listPage-block">
-          <a href="#">
+      <Link className="single-writer" to="/author">
+        <Col key={i} span={6}>
+          <div className="writer-listPage-block">
             {/* TODO: линки на страницу */}
             <img src={item.photo} alt={item.name}></img>
-            <div className="writer-name">{item.name}</div>
+            <h4 className="writer-name">{item.name}</h4>
             <div className="writer-birth-place">Место Рождения: {item.placeOfBirth}</div>
-            <div className="writer-description">{item.description}</div>
-          </a>
-        </div>
-      </Col>
+            <p className="writer-description">{item.description}</p>
+          </div>
+        </Col>
+      </Link>
     )
+  }
+  
+  list = () => {
+    const { search } = this.state;
+    let size = 4; //размер подмассива
+    let subarray = []; //массив в который будет разделен на подмассивы по 4 элемента.
+
+    for (let i = 0; i < Math.ceil(search.length / size); i += 1) {
+      subarray[i] = search.slice((i*size), (i*size) + size);
+    }
+
+    return subarray.map((item, i) => {
+      return(
+      <div key={i}>
+        <Row gutter={16}>
+          {item.map(this.listOfWriters)}
+        </Row>
+        <Divider/>
+      </div>
+      )
+    })
   }
 
   handleSearch = (e) => {
@@ -52,23 +70,27 @@ class Writers extends Component {
   }
 
   render() {
-    const { search } = this.state;
     const { Content } = Layout;
     return (
       <div>
-        <Layer path='/writers'>
+        <Layout className='layer'>
+          <Layer path='/writers'>
             <Content style={{ padding: '0 50px' }}>
-              <h1>Writers</h1>
-              <input
-                className="search"
-                placeholder='search by name and place of birth'
-                onChange={this.handleSearch}
-              />
-              <div className="writers-list">
-                {search.map(this.list)}
+              <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+                <h1>Writers</h1>
+                <input
+                  className="search"
+                  placeholder='search by name and place of birth'
+                  onChange={this.handleSearch}
+                />
+                <Divider/>
+                <div className="writers-list">
+                  {this.list()}
+                </div>
               </div>
             </Content>
-        </Layer>
+          </Layer>
+        </Layout>
       </div>
     )
   }
