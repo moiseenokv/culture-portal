@@ -22,8 +22,8 @@ class MyMap extends Component {
           dragging={true}
         >
           <TileLayer 
-            url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors" 
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors" 
           />
           {this.props.data.map((element, i) => <Marker key={i} position={element}/> )}
         </Map>

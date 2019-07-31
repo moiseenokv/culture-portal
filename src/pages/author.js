@@ -5,6 +5,7 @@ import MyVideo from '../components/videoWidget'
 import MyMap from '../components/mapWidget';
 import TimeLine from '../components/timeLine';
 import Gallery from '../components/gallery';
+import Korotkevich from '../images/korotkevich.jpg';
 
 import '../styles/author.css';
 
@@ -17,7 +18,7 @@ const AuthorPage = () => {
         <Layout className="layout">
           <Content style={{ padding: '0 50px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-              <img alt="фото" src=""/>
+              <img alt="фото" src={Korotkevich}/>
               <h2>имя</h2>
               <h3>годы жизни</h3>
               <Row type="flex" justify="space-around">
@@ -26,7 +27,9 @@ const AuthorPage = () => {
                 </Col>
               </Row>
               <Divider/>
-              <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
+              <div>
+                <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
+              </div>
               <Divider/>
               <TimeLine/>
               <Divider/>
