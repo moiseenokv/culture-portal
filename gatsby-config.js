@@ -7,6 +7,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     'gatsby-plugin-antd',
     `gatsby-plugin-react-helmet`,
     {
@@ -30,7 +31,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    
+
     },
     {
       resolve: 'gatsby-plugin-react-leaflet',
@@ -55,7 +56,7 @@ module.exports = {
         ]
       }
     },
-    
+
     "gatsby-remark-embed-video",
     "gatsby-remark-responsive-iframe"
     // this (optional) plugin enables Progressive Web App + Offline functionality
