@@ -7,10 +7,6 @@
 }
 
 .author-of-the-day-img {
-  text-align: center;
-}
-
-.author-of-the-day-img img {
   height: 100%;
   margin: 0;
 }
@@ -37,4 +33,9 @@ h3 {
   background: #fff;
   padding: 24px;
   min-height: 280px;
+}
+
+.layout a {
+  text-decoration: none;
+  color: #000;
 }
