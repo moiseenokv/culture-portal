@@ -3,6 +3,7 @@ import { Layout, Divider } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
+import { Link } from 'gatsby';
 
 class Writers extends Component {
   constructor() {
@@ -20,7 +21,9 @@ class Writers extends Component {
   list = (item, i) => {
     return (
       <div key={i}>
-        <div>{item.name}</div>
+        <Link to="/author">
+          <div>{item.name}</div>
+        </Link>
         <div>Место Рождения: {item.placeOfBirth}</div>
         <div>{item.description}</div>
         <Divider/>

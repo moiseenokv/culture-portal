@@ -1,6 +1,7 @@
 import React from 'react';
 import Layer from '../components/layer';
 import { Layout, Divider, Row, Col } from 'antd';
+import MyVideo from '../components/videoWidget'
 import MyMap from '../components/mapWidget';
 import TimeLine from '../components/timeLine';
 import Gallery from '../components/gallery';
@@ -32,6 +33,8 @@ const AuthorPage = () => {
               <div className='gallery'>
                 <Gallery/>
               </div>
+              <Divider/>
+              <MyVideo url='https://www.youtube.com/embed/vkEscYr-tfU' title="Karatkevich" />
               <Divider/>
             </div>
           </Content>
