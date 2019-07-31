@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import './video.css'
+import '../styles/video.css'
 
 const Video = ({ url, title }) => (
     <div className="video">

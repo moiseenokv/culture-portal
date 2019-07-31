@@ -28,7 +28,7 @@ class Header extends Component {
           <Layout.Header>
             <Row>
               <Col span={4}>
-                <Select defaultValue="ru" style={{ width: 60 }} onChange={this.handleChange}>
+                <Select defaultValue="ru" className='change-language' onChange={this.handleChange}>
                   <Option value="en">en</Option>
                   <Option value="ru">ru</Option>
                   <Option value="by">by</Option>
@@ -39,7 +39,7 @@ class Header extends Component {
                   theme="dark"
                   mode="horizontal"
                   defaultSelectedKeys={[this.selectDefaultPath()]}
-                  style={{ lineHeight: '64px' }}
+                  className='navigation'
                 >
                   <Menu.Item key="/"><Link to='/'>На Главную</Link></Menu.Item>
                   <Menu.Item key="/writers"><Link to='/writers'>Писатели</Link></Menu.Item>

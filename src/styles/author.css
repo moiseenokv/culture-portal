@@ -6,7 +6,7 @@
 }
 
 .gallery button {
-  background: black !important;
+  background: #000 !important;
   width: 50px !important;
 }
 
@@ -15,5 +15,28 @@
   position: absolute;   
   top: 50%;
   transform: translateY(-50%);
+  margin: 0 auto;
+}
+
+.content {
+  padding: 0 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-wrapper {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+.carousel {
+  height: 250px;
+  width: 500px;
+}
+
+.map {
+  height: 480px;
+  width: 500px;
   margin: 0 auto;
 }

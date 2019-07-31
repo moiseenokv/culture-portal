@@ -10,12 +10,11 @@
 }
 
 .search:focus {
-  border-color: rgba(0, 89, 255, 0.514);
+  border-color: rgba(0, 89, 255, 0.5);
 }
 
 .writer-listPage-block {
   padding: 0 5px;
-  text-align: center;
 }
 
 .writer-listPage-block img {
@@ -26,7 +25,7 @@
 .single-writer {
   width: 100%;
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 .writer-listPage-block h4 {
@@ -38,11 +37,11 @@
 }
 
 .writer-listPage-block div {
-  color: gray;
+  color: #808080;
 }
 
 .writer-listPage-block:hover, .single-writer:hover {
-  color: black;
+  color: #000;
   background-color: rgba(149, 149, 255, 0.171);
 }
 
@@ -50,4 +49,16 @@
   margin-top: 15px;
   display: inline-block;
   width: 100%;
+}
+
+.content {
+  padding: 0 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-wrapper {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
 }

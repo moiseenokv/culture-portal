@@ -75,8 +75,8 @@ class Writers extends Component {
       <div>
         <Layout className='layer'>
           <Layer path='/writers'>
-            <Content style={{ padding: '0 50px' }}>
-              <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+            <Content className='content'>
+              <div className='content-wrapper'>
                 <h1>Writers</h1>
                 <input
                   className="search"

@@ -12,8 +12,8 @@ const Main = () => {
     <div>
       <Layer path='/'>
         <Layout className="layout">
-          <Content style={{ padding: '0 50px' }}>
-            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+          <Content className='content'>
+            <div className='content-wrapper'>
               <h1>Писатели Беларуси</h1>
               <p className="writers-about">Белорусская литература условно делится на несколько периодов: «Давняя (древняя)
                 белорусская литература» (ХI—ХVІІ вв.), «Новая беларуская литература» (перв.пол. XVIII—ХІХ в.в.)

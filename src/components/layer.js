@@ -13,7 +13,7 @@ const Layer = ({ children, path }) => {
   <div>
     <Header path={path} />
     <main>{children}</main>
-    <Footer style={{ textAlign: 'center' }}>
+    <Footer className='footer'>
       <div className="delepopers-header">Наша команда разработчиков</div>
       <Row className="developers">
         <Col span={4}>
