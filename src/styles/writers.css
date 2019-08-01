@@ -14,12 +14,13 @@
 }
 
 .writer-listPage-block {
-  padding: 0 5px;
+  padding: 10px;
 }
 
 .writer-listPage-block img {
   width: auto;
   height: 200px;
+  margin-bottom: 15px;
 }
 
 .single-writer {
@@ -44,7 +45,9 @@
   color: #808080;
 }
 
-.writer-listPage-block:hover, .single-writer:hover {
+.writer-listPage-block:hover, 
+.single-writer:hover {
+  transition: 0.4s;
   color: #000;
   background-color: rgba(149, 149, 255, 0.171);
 }
@@ -71,9 +74,14 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
+  margin: 0;
 }
 
 .writer-birth-place {
   height: 42px;
+}
+
+.writers-list .ant-row {
+  padding-bottom: 10px;
 }
