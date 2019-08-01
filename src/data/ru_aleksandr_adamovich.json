@@ -3,8 +3,8 @@
   "masterpieces": "{\n\"year\":\"masterpiece\",\n\"year\":\"masterpiece\",\n\"year\":\"masterpiece\",\n\"year\":\"masterpiece\",\n\"year\":\"masterpiece\"\n}",
   "mapPlaces": "{\n\"places\":[\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"]]\n}",
   "gallery": "{\n\"img\":[\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"]]\n}",
-  "title": "ru_aleksandr_adamovich",
-  "language": "ru",
+  "title": "by_aleksandr_adamovich",
+  "language": "by",
   "title2": "aleksandr_adamovich",
   "video": "https://www.youtube.com/watch?v=rnVdtUm30Ew",
   "snippet": "{\n\"fullName\":\"Aleksandr Adamovich\",\n\"birthDate\":\"1928\",\n\"deathDate\":\"2002\",\n\"birthCity\":\"Minsk\",\n\"deathCity\":\"Minsk\",\n\"description\":\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\"\n}"
