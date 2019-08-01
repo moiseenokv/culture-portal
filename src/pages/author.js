@@ -16,8 +16,8 @@ const AuthorPage = () => {
     <div>
       <Layer path='/'>
         <Layout className="layout">
-          <Content style={{ padding: '0 50px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+          <Content className='content'>
+            <div className='content-wrapper'>
               <img alt="фото" src={Korotkevich}/>
               <h2>имя</h2>
               <h3>годы жизни</h3>

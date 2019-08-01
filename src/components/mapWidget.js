@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Map, TileLayer, Marker } from 'react-leaflet'
 import PropTypes from 'prop-types'
 
+import '../styles/author.css';
+
 class MyMap extends Component {
   constructor() {  
     super(); 
@@ -13,7 +15,7 @@ class MyMap extends Component {
     if (typeof window !== 'undefined') {
       return (
         <Map coordinates
-          style={{ height: "480px", width: "500px", margin: '0 auto' }}
+          className='map'
           center={[54, 28]}
           zoom={5.7}
           maxZoom={10}

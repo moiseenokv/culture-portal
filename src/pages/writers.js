@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Divider, Col } from 'antd';
+import { Layout, Divider, Col, Row } from 'antd';
 import Layer from '../components/layer';
 import Data from '../components/constants';
 import '../styles/writers.css';
@@ -14,25 +14,41 @@ class Writers extends Component {
     }
   }
 
-  data = () => {
-    
-  }
-
-  list = (item, i) => {
+  listOfWriters = (item, i) => {
     return (
-      <Col span={5}>
-        <div key={i} className="writer-listPage-block">
-          <Link to="/author">
+      <Link key={i} className="single-writer" to="/author">
+        <Col span={6}>
+          <div className="writer-listPage-block">
             {/* TODO: линки на страницу */}
             <img src={item.photo} alt={item.name}></img>
-            <div className="writer-name">{item.name}</div>
+            <h5 className="writer-name">{item.name}</h5>
             <div className="writer-birth-place">Место Рождения: {item.placeOfBirth}</div>
-            <div className="writer-description">{item.description}</div>
-          </Link>
-        </div>
-        <Divider/>
-      </Col>
+            <p className="writer-description">{item.description}</p>
+          </div>
+        </Col>
+      </Link>
     )
+  }
+  
+  list = () => {
+    const { search } = this.state;
+    let size = 4; //размер подмассива
+    let subarray = []; //подмассив в котором будут массивы по 4 элемента.
+
+    for (let i = 0; i < Math.ceil(search.length / size); i += 1) {
+      subarray[i] = search.slice((i*size), (i*size) + size);
+    }
+
+    return subarray.map((item, i) => {
+      return(
+      <div key={i}>
+        <Row gutter={16}>
+          {item.map(this.listOfWriters)}
+        </Row>
+        <Divider/>
+      </div>
+      )
+    })
   }
 
   handleSearch = (e) => {
@@ -54,23 +70,27 @@ class Writers extends Component {
   }
 
   render() {
-    const { search } = this.state;
     const { Content } = Layout;
     return (
       <div>
-        <Layer path='/writers'>
-            <Content style={{ padding: '0 50px' }}>
-              <h1>Writers</h1>
-              <input
-                className="search"
-                placeholder='search by name and place of birth'
-                onChange={this.handleSearch}
-              />
-              <div className="writers-list">
-                {search.map(this.list)}
+        <Layout className='layer'>
+          <Layer path='/writers'>
+            <Content className='content'>
+              <div className='content-wrapper'>
+                <h1>Writers</h1>
+                <input
+                  className="search"
+                  placeholder='search by name and place of birth'
+                  onChange={this.handleSearch}
+                />
+                <Divider/>
+                <div className="writers-list">
+                  {this.list()}
+                </div>
               </div>
             </Content>
-        </Layer>
+          </Layer>
+        </Layout>
       </div>
     )
   }

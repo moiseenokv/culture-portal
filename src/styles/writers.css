@@ -10,17 +10,70 @@
 }
 
 .search:focus {
-  border-color: rgba(0, 89, 255, 0.514);
+  border-color: rgba(0, 89, 255, 0.5);
+}
+
+.writer-listPage-block {
+  padding: 0 5px;
 }
 
 .writer-listPage-block img {
   width: auto;
-  margin: 0 auto;
   height: 200px;
+}
+
+.single-writer {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+.writer-listPage-block h5 {
+  height: 32px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.writer-listPage-block p {
+  text-align: left;
+}
+
+.writer-listPage-block div {
+  color: #808080;
+}
+
+.writer-listPage-block:hover, .single-writer:hover {
+  color: #000;
+  background-color: rgba(149, 149, 255, 0.171);
 }
 
 .writers-list {
   margin-top: 15px;
   display: inline-block;
   width: 100%;
+}
+
+.content {
+  padding: 0 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content-wrapper {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+.writer-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+}
+
+.writer-birth-place {
+  height: 42px;
 }
