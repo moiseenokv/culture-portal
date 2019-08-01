@@ -1,7 +1,7 @@
 import React from 'react'
 import ModalVideo from 'react-modal-video'
 import PropTypes from "prop-types"
-import '../styles/modal-video.scss'
+import '../styles/modal-video.css'
 import YouTube from '../images/Logo_YouTube.png'
 
 class MyVideo extends React.Component {
