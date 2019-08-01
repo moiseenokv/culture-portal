@@ -45,7 +45,6 @@ class Writers extends Component {
         <Row gutter={16}>
           {item.map(this.listOfWriters)}
         </Row>
-        <Divider/>
       </div>
       )
     })
@@ -83,7 +82,6 @@ class Writers extends Component {
                   placeholder='search by name and place of birth'
                   onChange={this.handleSearch}
                 />
-                <Divider/>
                 <div className="writers-list">
                   {this.list()}
                 </div>
