@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: project-production
+
+media_folder: src/images
+public_folder: /img
+
+collections:
+  - label: "Writers"
+    name: "writers"
+    folder: "src/data"
+    create: true
+    slug: "{{title}}"
+    editor:
+     preview: false
+    extension: "json"
+    fields:
+      - {label: "Main title(only translit, no cyrillic)", name: "title", widget: "string"}
+      - {label: "Title for src", name: "title2", widget: "string"}
+      - {label: "Language", name: "language", widget: "string"}
+      - {label: "Snippet", name: "snippet", widget: "text"}
+      - {label: "Timeline", name: "timeline", widget: "text"}
+      - {label: "Masterpieces", name: "masterpieces", widget: "text"}
+      - {label: "Video", name: "video", widget: "string"}
+      - {label: "Places", name: "mapPlaces", widget: "text"}
+      - {label: "Gallery", name: "gallery", widget: "text"}
