@@ -46,14 +46,15 @@
   font-style: italic;
 }
 
-.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-content {
+.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content {
   width: 30%;
-}
-
-.ant-timeline.ant-timeline-alternate .ant-timeline-item-right {
-  left: 0;
 }
 
 .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-content {
   font-size: 14px;
+}
+
+.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+  left: 18%;
+  width: 30%;
 }
