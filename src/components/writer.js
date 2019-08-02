@@ -19,7 +19,7 @@ const AuthorPage = ({ data, t }) => {
   const gallery = JSON.parse(dataToShow.gallery);
   const timeline = JSON.parse(dataToShow.timeline);
   const mapPlaces = JSON.parse(dataToShow.mapPlaces);
-  const video = dataToShow.video;//todo add to component
+  const video = dataToShow.video;
   const masterpieces = JSON.parse(dataToShow.masterpieces);//todo add masterpiece component
 
   const { Content } = Layout;
@@ -37,7 +37,7 @@ const AuthorPage = ({ data, t }) => {
               <Divider/>
               <MyMap data={mapPlaces} t={t}/>
               <Divider/>
-              <MyVideo url='https://www.youtube.com/embed/vkEscYr-tfU' title="Karatkevich"/>
+              <MyVideo url={video} title="Karatkevich"/>
               <Divider/>
             </div>
           </Content>
