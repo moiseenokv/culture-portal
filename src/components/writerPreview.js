@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-i18next';
 import PropTypes from 'prop-types';
 
 import '../styles/writers.css';
 
 const WriterPreview = (props) => (
-  <Link className="single-writer" to="/author">
+  <Link className="single-writer" to={`/${props.title}`}>
     <div className="writer-listPage-block">
       {/* TODO: линки на страницу */}
-      <img src={props.photo} alt={props.name}/>
-      <h5 className="writer-name">{props.name}</h5>
-      <div className="writer-birth-place">Место Рождения: {props.placeOfBirth}</div>
+      <img src={props.photo} alt={props.fullName}/>
+      <h5 className="writer-name">{props.fullName}</h5>
+      <div className="writer-birth-place">{`${props.t('placeOfBirth')}: ${props.birthCity}`}</div>
       <p className="writer-description">{props.description}</p>
     </div>
   </Link>
@@ -18,9 +18,10 @@ const WriterPreview = (props) => (
 
 WriterPreview.propTypes = {
   photo: PropTypes.string,
-  placeOfBirth: PropTypes.string,
+  birthCity: PropTypes.string,
   description: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default WriterPreview;
