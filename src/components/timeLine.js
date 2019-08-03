@@ -1,5 +1,6 @@
 import React from 'react';
 import { Timeline } from 'antd';
+import PropTypes from 'prop-types';
 
 const TimeLine = ({ data, t }) => {
   return (
@@ -24,5 +25,10 @@ const TimeLine = ({ data, t }) => {
     </>
   );
 };
+
+TimeLine.propTypes = {
+  data: PropTypes.object,
+  t: PropTypes.func.isRequired,
+}
 
 export default TimeLine;

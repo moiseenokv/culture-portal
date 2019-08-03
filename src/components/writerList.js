@@ -19,11 +19,11 @@ const WriterList = ({ t, writers, colAmount = 4 }) => {
           <Row gutter={16}>
             {items.map((item, j) => (
               <Col span={6} key={j}>
-                <WriterPreview {...item} t={t}/>
+                <WriterPreview {...item} t={t} />
               </Col>
             ))}
           </Row>
-          <Divider/>
+          <Divider />
         </div>
       ))}
     </div>

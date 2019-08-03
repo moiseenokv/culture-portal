@@ -8,7 +8,7 @@ import '../styles/developers.css';
 const Layer = ({ children, path, t }) => {
   return (
     <div>
-      <Header path={path} t={t}/>
+      <Header path={path} t={t} />
       <main>{children}</main>
     </div>
   );
