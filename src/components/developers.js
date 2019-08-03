@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row } from 'antd';
+import PropTypes from 'prop-types';
 
 import Developer from './developer';
 import '../styles/developers.css';
@@ -11,10 +12,14 @@ const Developers = ({ t }) => (
     <div className="developers-header">{t('developersTitle')}</div>
     <Row className="developers">
       {TEAM_DATA.map(devData => (
-        <Developer {...devData} key={devData.login}/>
+        <Developer {...devData} key={devData.login} />
       ))}
     </Row>
   </div>
 );
+
+Developers.propTypes = {
+  t: PropTypes.func.isRequired,
+}
 
 export default Developers;

@@ -28,7 +28,7 @@ class Header extends Component {
           <Layout.Header>
             <Row>
               <Col span={4}>
-                <LanguageSwitcher/>
+                <LanguageSwitcher />
               </Col>
               <Col span={20}>
                 <Menu

@@ -3,6 +3,7 @@ import { withI18next } from 'gatsby-plugin-i18next';
 import { withNamespaces } from 'react-i18next';
 import { Layout, Divider } from 'antd';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layer from './layer';
 import WriterCard from './writerCard';
@@ -29,22 +30,31 @@ const AuthorPage = ({ data, t }) => {
         <Layout className="layout author-page">
           <Content className='content'>
             <div className='content-wrapper'>
-              <WriterCard data={writerCard}/>
-              <Divider/>
-              <Gallery data={gallery} t={t}/>
-              <Divider/>
-              <TimeLine data={timeline} t={t}/>
-              <Divider/>
-              <MyMap data={mapPlaces} t={t}/>
-              <Divider/>
-              <MyVideo url={video} title="Karatkevich"/>
-              <Divider/>
+              <WriterCard data={writerCard} />
+              <Divider />
+              <Gallery data={gallery} t={t} />
+              <Divider />
+              <TimeLine data={timeline} t={t} />
+              <Divider />
+              <MyMap data={mapPlaces} t={t} />
+              <Divider />
+              <MyVideo url={video} title="Karatkevich" />
+              <Divider />
             </div>
           </Content>
         </Layout>
       </Layer>
     </div>
   );
+};
+
+AuthorPage.propTypes = {
+  data: PropTypes.object,
+  dataToShow: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
+  t: PropTypes.func.isRequired,
 };
 
 export const postQuery = graphql`
