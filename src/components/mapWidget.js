@@ -5,13 +5,11 @@ import PropTypes from 'prop-types';
 import '../styles/author.css';
 
 const MyMap = ({ data, t }) => {
-  // const { coordinates } = this.props;
-  // const position = [this.state.lat, this.state.lng]
   if (typeof window !== 'undefined') {
     return (
       <>
         <h2>{t('mapPlaces')}</h2>
-        <Map coordinates
+        <Map
           className='map'
           center={[54, 28]}
           zoom={5.7}
