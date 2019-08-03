@@ -1,7 +1,7 @@
 {
   "timeline": "{\n\"1949-1954\":\"studying at the Russian department of the philological department of the Taras Shevchenko KSU, then graduating from the graduate school\",\n\"1955\":\"passing the candidate minimum exam, beginning and writing a thesis about the 1863 uprising\",\n\"1954-1956\":\"work as a school teacher of Russian language and literature in the village of Lesovichi (Tarashchansky district, Kiev region\",\n\"1956-1958\":\"work as a school teacher in Orsha\",\n\"1958-1962\":\"passing and graduating from the Higher literary and scenario courses at the Institute of Cinematography in Moscow\"\n}",
   "masterpieces": "{\n\"1958\":\"The Gypsy King\",\n\"1960\":\"Maternal Soul\",\n\"1966\":\"Christ landed in Grodno\",\n\"1973\":\"Chestnut Leaves\",\n\"1977\":\"Land under white wings\"\n}",
-  "mapPlaces": "{\n\"places\":[\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"]]\n}",
+  "mapPlaces": "{\n\"mapPlaces\":[\n      [54.4986,30.4],\n      [54.3888,40.5996],\n      [55.7504,37.6177],\n      [53.903805,27.556136]]\n}",
   "gallery": "{\n\"img\":[\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"]]\n}",
   "title": "en_uladzimir_karatkevich",
   "language": "en",
