@@ -15,11 +15,12 @@ const AuthorPage = () => {
   return (
     <div>
       <Layer path='/'>
-        <Layout className="layout">
+        <Layout className="layout author-page">
           <Content className='content'>
             <div className='content-wrapper'>
+            <h1>Имя автора</h1>
+            {/* TODO:alt исправить */}
               <img alt="фото" src={Korotkevich}/>
-              <h2>имя</h2>
               <h3>годы жизни</h3>
               <Row type="flex" justify="space-around">
                 <Col span={14}>описание описание описание описание описание описание описание описание описание
@@ -27,23 +28,27 @@ const AuthorPage = () => {
                 </Col>
               </Row>
               <Divider/>
-              <div>
-                <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
-              </div>
-              <Divider/>
-              <TimeLine/>
-              <Divider/>
+              <h2>Галерея</h2>
               <div className='gallery'>
                 <Gallery/>
               </div>
               <Divider/>
-              <MyVideo url='https://www.youtube.com/embed/vkEscYr-tfU' title="Karatkevich" />
+              <h2>Основные события в жизни</h2>
+              <TimeLine/>
+              <Divider/>
+              <h2>Ключевые места, связанные с автором</h2>
+              <div>
+                <MyMap data={[[54.000361, 27.028653], [54.034945, 28.037390], [54.033028, 28.539078], [54.067857, 28.330841]]} />
+              </div>
+              <Divider/>
+              <h2>Видео об авторе</h2>
+              <MyVideo url='vkEscYr-tfU' title="Karatkevich" />
               <Divider/>
             </div>
           </Content>
         </Layout>
       </Layer>
-    </div>      
+    </div>
   )
 }
 

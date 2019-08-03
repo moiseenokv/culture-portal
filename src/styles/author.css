@@ -40,3 +40,21 @@
   width: 500px;
   margin: 0 auto;
 }
+
+.author-page h3 {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-left .ant-timeline-item-content {
+  width: 30%;
+}
+
+.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-content {
+  font-size: 14px;
+}
+
+.author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+  left: 18%;
+  width: 30%;
+}
