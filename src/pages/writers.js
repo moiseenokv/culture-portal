@@ -18,18 +18,14 @@ class Writers extends Component {
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
-    if (props.data.allDataJson !== state.data.allDataJson) {
-      const initialData = props.data.allDataJson.edges.map(({ node }) => {
-        return Object.assign({ title: node.title2 }, JSON.parse(node.snippet))
-      });
+  static getDerivedStateFromProps(props) {
+    const initialData = props.data.allDataJson.edges.map(({ node }) => {
+      return Object.assign({ title: node.title2 }, JSON.parse(node.snippet))
+    });
 
-      return {
-        data: initialData,
-      }
+    return {
+      data: initialData,
     }
-
-    return null;
   }
 
   componentDidMount() {
