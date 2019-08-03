@@ -11,7 +11,9 @@ import '../styles/main.css';
 import AuthorOfTheDay from '../components/authorOfTheDay';
 
 const Main = ({ data, t }) => {
-  const authorOfTheDay = Object.assign({ title: data.dataJson.title2 }, JSON.parse(data.dataJson.snippet));
+  const authorOfTheDayId = new Date().getDay() % data.allDataJson.edges.length;
+  const { node } = data.allDataJson.edges[authorOfTheDayId];
+  const authorOfTheDay = Object.assign({ title: node.title2 }, JSON.parse(node.snippet));
 
   const { Content } = Layout;
   return (
@@ -31,13 +33,13 @@ const Main = ({ data, t }) => {
         </Layout>
       </Layer>
     </div>
-  )
+  );
 };
 
 Main.propTypes = {
   data: PropTypes.objectOf(PropTypes.object),
   t: PropTypes.func,
-}
+};
 
 export const query = graphql`
   query($lng: String!) {
@@ -45,9 +47,13 @@ export const query = graphql`
       ...TranslationFragment
     }
 
-    dataJson(language: {eq: $lng}){
-      title2
-      snippet
+    allDataJson(filter: {language: {eq: $lng}}, sort: {fields: [title2], order: ASC}) {
+      edges {
+        node {
+          title2
+          snippet
+        }
+      }
     }
   }
 `;
