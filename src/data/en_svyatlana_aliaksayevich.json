@@ -1,7 +1,7 @@
 {
   "timeline": "{\n\"1972\":\"graduated from the Faculty of Journalism of the Belarusian State University, beginning work in the\" Mayak of Communism \"- a district newspaper in the town of Bereus, Brest Region\",\n\"1973-1976\":\"work in the Belarusian“ Selskaya Gazeta ”,\n\"1976-1984\":\"the head of the essay and journalism department of the magazine\" Neman \"\"\n\"1983\":\"the entry into the Union of Soviet Writers on the recommendation of A. Adamovich, J. Bryl, V. Bykov and V. Vitki\",\n\"2000-2013\":\"Accommodation in Italy, France, Germany\"\n}",
   "masterpieces": "{\n\"1985\":\"The war does not have a female face\",\n\"1989\":\"Zinc boys\",\n\"1994\":\"Charmed with Death\",\n\"1997\":\"Chernobyl Prayer\",\n\"2013\":\"Second hand time\"\n}",
-  "mapPlaces": "{\n\"mapPlaces\":[\n      [48.9163,24.7105],\n      [52.3113,28.8142],\n      [51.7939,29.4998],\n      [52.5441,24.9666]]\n}",
+  "mapPlaces": "[[48.9163,24.7105], [52.3113,28.8142], [51.7939,29.4998], [52.5441,24.9666]]",
   "gallery": "{\n\"img\":[\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"]]\n}",
   "title": "en_svyatlana_aliaksayevich",
   "language": "en",
