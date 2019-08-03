@@ -39,7 +39,7 @@ export const query = graphql`
       ...TranslationFragment
     }
 
-    dataJson(language: {eq: $lng}, authorOfTheDay: {eq: true}){
+    dataJson(language: {eq: $lng}){
       title2
       snippet
     }
