@@ -26,7 +26,7 @@ const AuthorPage = ({ data, t }) => {
   const { Content } = Layout;
   return (
     <div>
-      <Layer path='/' t={t}>
+      <Layer t={t}>
         <Layout className="layout author-page">
           <Content className='content'>
             <div className='content-wrapper'>
