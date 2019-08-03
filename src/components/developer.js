@@ -11,9 +11,9 @@ const Developer = (props) => (
     <div className="developer-card">
       <a href={`https://github.com/${props.login}`} rel="noopener noreferrer" target='_blank'>
         <p>{props.name}</p>
-        <img alt={props.name} src={props.avatarSrc}/>
+        <img alt={props.name} src={props.avatarSrc} />
         <div className="github">
-          <img alt={props.login} src={github}/>
+          <img alt={props.login} src={github} />
           <span>{props.login}</span>
         </div>
       </a>
