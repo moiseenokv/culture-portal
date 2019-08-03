@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-i18next';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Layout, Menu, Col, Row } from 'antd';
@@ -37,8 +37,8 @@ class Header extends Component {
                   defaultSelectedKeys={[this.selectDefaultPath()]}
                   className='navigation'
                 >
-                  <Menu.Item key='/'><Link to='/'>На Главную</Link></Menu.Item>
-                  <Menu.Item key='/writers'><Link to='/writers'>Писатели</Link></Menu.Item>
+                  <Menu.Item key='/'><Link to='/'>{this.props.t('menuHome')}</Link></Menu.Item>
+                  <Menu.Item key='/writers'><Link to='/writers'>{this.props.t('menuWriters')}</Link></Menu.Item>
                 </Menu>
               </Col>
             </Row>
@@ -51,6 +51,7 @@ class Header extends Component {
 
 Header.propTypes = {
   path: PropTypes.string,
+  t: PropTypes.func.isRequired,
 };
 
 export default Header;

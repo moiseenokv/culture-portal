@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import { Layout, Divider } from 'antd';
+import { graphql } from 'gatsby';
+import { withNamespaces } from 'react-i18next';
+import { withI18next } from 'gatsby-plugin-i18next';
 
 import Layer from '../components/layer';
 import WriterList from '../components/writerList';
-import Data from '../components/constants';
 import '../styles/writers.css';
 
 class Writers extends Component {
   constructor(props) {
     super(props);
+
+    let initialData = [];
+    if (props.data.allDataJson) {
+      initialData = props.data.allDataJson.edges.map(({ node }) =>
+        Object.assign({ title: node.title2 }, JSON.parse(node.snippet)));
+    }
     this.state = {
-      data: Data,
-      search: Data,
+      data: initialData,
+      search: initialData,
     };
   }
 
@@ -25,9 +33,9 @@ class Writers extends Component {
     }
 
     search = search.toLowerCase();
-    const result = data.filter(({ name, placeOfBirth }) =>
-      name.toLowerCase().includes(search)
-      || placeOfBirth.toLowerCase().includes(search));
+    const result = data.filter(({ fullName, birthCity }) =>
+      fullName.toLowerCase().includes(search)
+      || birthCity.toLowerCase().includes(search));
 
     this.setState({ search: result });
   };
@@ -35,17 +43,17 @@ class Writers extends Component {
   render() {
     return (
       <Layout className='layer'>
-        <Layer path='/writers'>
+        <Layer path='/writers' t={this.props.t}>
           <Layout.Content className='content'>
             <div className='content-wrapper'>
-              <h1>Writers</h1>
+              <h1>{this.props.t('writersTitle')}</h1>
               <input
                 className="search"
                 placeholder='search by name and place of birth'
                 onChange={this.handleSearch}
               />
               <Divider/>
-              <WriterList writers={this.state.search}/>
+              <WriterList writers={this.state.search} t={this.props.t}/>
             </div>
           </Layout.Content>
         </Layer>
@@ -54,4 +62,28 @@ class Writers extends Component {
   }
 }
 
-export default Writers;
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
+      ...TranslationFragment
+    }
+    allDataJson(
+    filter: {language: {eq: $lng}},
+    sort: {
+      fields: [
+        title2
+      ]
+      order: ASC
+    }
+  ) {
+      edges {
+        node {
+          title2
+          snippet
+        }
+      }
+    }
+  }
+`;
+
+export default withI18next()(withNamespaces()(Writers));
