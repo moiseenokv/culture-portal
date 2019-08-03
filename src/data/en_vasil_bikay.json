@@ -1,7 +1,7 @@
 {
   "timeline": "{\n\"1939-1941\":\"studying at the sculpture department of the Vitebsk Art School (1939-1940), which was later discontinued due to the cancellation of scholarships\",\n\"1942\":\"the end of the Saratov Infantry School, the beginning of military service\",\n\"1944\":\"wound to the leg and abdomen during the Kirovograd operation, three months in the hospital, participation in the Yassy-Kishinev operation, the liberation of Romania\",\n\"1988\": one of the founders of the Belarusian Popular Front\",\n\"1997-2003\":\"living abroad in political emigration in Finland, Germany, the Czech Republic\"\n}",
   "masterpieces": "{\n\"1961\":\"The Third Rocket\",\n\"1963\":\"The Alpine Ballad\",\n\"1965\":\"Dead does not hurt,\"\n\"1971\":\"Obelisk\",\n\"1972\":\"Live to Dawn\"\n}",
-  "mapPlaces": "{\n\"places\":[\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"],\n       [\"long\",\"lat\",\"description\"]]\n}",
+  "mapPlaces": "{\n\"mapPlaces\":[\n      [55.165832,28.379720],\n      [50.5938,36.5998],\n      [53.6608,23.8165],\n      [53.902412,27.561669]]\n}",
   "gallery": "{\n\"img\":[\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"]]\n}",
   "title": "en_vasil_bikay",
   "language": "en",
