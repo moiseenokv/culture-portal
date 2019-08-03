@@ -4,9 +4,9 @@ import ModalVideo from 'react-modal-video'
 import '../styles/modal-video.min.css'
 
 import LogoYouTube from '../images/Logo_YouTube.png'
-export default class MyVideo  extends React.Component {
+export default class MyVideo extends React.Component {
 
-  constructor () {
+  constructor() {
     super()
     this.state = {
       isOpen: false
@@ -14,14 +14,14 @@ export default class MyVideo  extends React.Component {
     this.openModal = this.openModal.bind(this)
   }
 
-  openModal () {
-    this.setState({isOpen: true})
+  openModal() {
+    this.setState({ isOpen: true })
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={this.props.url} onClose={() => this.setState({isOpen: false})} />
+        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={this.props.url} onClose={() => this.setState({ isOpen: false })} />
         <a onClick={this.openModal}>
           <img className='video-button' src={LogoYouTube}>
           </img>
@@ -32,6 +32,6 @@ export default class MyVideo  extends React.Component {
 }
 
 MyVideo.propTypes = {
-    url: PropTypes.string,
-    title: PropTypes.string
+  url: PropTypes.string,
+  title: PropTypes.string
 }

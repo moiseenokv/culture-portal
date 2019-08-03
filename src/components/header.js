@@ -14,27 +14,21 @@ class Header extends Component {
     };
   }
 
-  selectDefaultPath = () => {
-    const { selectedKeyPath } = this.state;
-    if (selectedKeyPath === '/' || selectedKeyPath === '/writers') {
-      return selectedKeyPath;
-    } else return '/';
-  };
-
   render() {
+    let { selectedKeyPath } = this.state;
     return (
       <div>
         <Layout className='layout'>
           <Layout.Header>
             <Row>
               <Col span={4}>
-                <LanguageSwitcher/>
+                <LanguageSwitcher />
               </Col>
               <Col span={20}>
                 <Menu
                   theme='dark'
                   mode='horizontal'
-                  defaultSelectedKeys={[this.selectDefaultPath()]}
+                  defaultSelectedKeys={[`${selectedKeyPath}`]}
                   className='navigation'
                 >
                   <Menu.Item key='/'><Link to='/'>{this.props.t('menuHome')}</Link></Menu.Item>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Language } from 'gatsby-plugin-i18next';
 import { Select } from 'antd';
+import PropTypes from 'prop-types';
 
 const LanguageSwitcher = ({ changeLng, lng, availableLngs }) => (
   <Select
@@ -13,8 +14,16 @@ const LanguageSwitcher = ({ changeLng, lng, availableLngs }) => (
   </Select>
 );
 
-export default props => (
-  <Language>
-    {lngProps => <LanguageSwitcher {...props} {...lngProps} />}
-  </Language>
-);
+LanguageSwitcher.propTypes = {
+  lng: PropTypes.string,
+  availableLngs: PropTypes.array,
+  changeLng: PropTypes.func,
+}
+
+export default function Switcher(props) {
+  return (
+    <Language>
+      {lngProps => <LanguageSwitcher {...props} {...lngProps} />}
+    </Language>
+  )
+}

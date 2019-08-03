@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
+import PropTypes from 'prop-types';
 
 import Korotkevich from '../images/korotkevich.jpg';
 import sea from '../images/sea.jpg';
@@ -13,13 +14,13 @@ const Gallery = ({ data, t }) => {
       <div className='gallery'>
         <Carousel className="carousel" autoplay>
           <div>
-            <img src={Korotkevich}/>
+            <img src={Korotkevich} />
           </div>
           <div>
-            <img src={sea}/>
+            <img src={sea} />
           </div>
           <div>
-            <img src={astronaut}/>
+            <img src={astronaut} />
           </div>
           <div>
             <h3>4</h3>
@@ -29,5 +30,10 @@ const Gallery = ({ data, t }) => {
     </>
   );
 };
+
+Gallery.propTypes = {
+  data: PropTypes.object,
+  t: PropTypes.func.isRequired,
+}
 
 export default Gallery;
