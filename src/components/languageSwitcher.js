@@ -1,15 +1,20 @@
 import React from 'react';
+import { Language } from 'gatsby-plugin-i18next';
 import { Select } from 'antd';
 
-const LanguageSwitcher = () => (
+const LanguageSwitcher = ({ changeLng, lng, availableLngs }) => (
   <Select
-    defaultValue="ru"
+    defaultValue={lng}
     className='change-language'
-    onChange={(e)=>{console.log(e)}}>
-    <Select.Option value="en">en</Select.Option>
-    <Select.Option value="ru">ru</Select.Option>
-    <Select.Option value="by">by</Select.Option>
+    onChange={chosenLang => changeLng(chosenLang)}>
+    {availableLngs.map(curValue => (
+      <Select.Option value={curValue} key={curValue}>{curValue}</Select.Option>
+    ))}
   </Select>
 );
 
-export default LanguageSwitcher;
+export default props => (
+  <Language>
+    {lngProps => <LanguageSwitcher {...props} {...lngProps} />}
+  </Language>
+);
