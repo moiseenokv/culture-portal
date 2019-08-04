@@ -24,7 +24,6 @@
 }
 
 .single-writer {
-  width: 100%;
   text-decoration: none;
   color: #000;
 }
@@ -70,21 +69,11 @@
   min-height: 280px;
 }
 
-.writer-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  margin: 0;
-}
-
 .writer-birth-place {
   height: 60px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .writers-list .ant-row {
@@ -109,12 +98,13 @@
   }
 
   .writer-birth-place {
-    height: 30px;
-    /* font-size: 0.7rem; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-    white-space: nowrap;
+    height: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  .writer-birth-place {
+    height: 50px;
   }
 }
 
@@ -126,4 +116,13 @@
   .content {
     padding: 0;
   }
+}
+
+/* autoprefixer: off */
+.writer-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  margin: 0;
 }
