@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import '../styles/writers.css';
 
-const WriterPreview = props => (
+const WriterPreview = (props) => (
   <Link className="single-writer" to={`/${props.title}`}>
     <div className="writer-listPage-block">
       <img src={props.photo} alt={props.fullName} />
@@ -12,7 +12,7 @@ const WriterPreview = props => (
       <div className="writer-birth-place">{`${props.t('placeOfBirth')}: ${
         props.birthCity
       }`}</div>
-      <p className="writer-description">{props.description}</p>
+      <div className="writer-description">{props.description}</div>
     </div>
   </Link>
 );

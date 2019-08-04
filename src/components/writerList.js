@@ -1,31 +1,29 @@
 import React from 'react';
-import { Divider, Col, Row } from 'antd';
+import { List } from 'antd';
 import PropTypes from 'prop-types';
 
 import '../styles/writers.css';
 import WriterPreview from './writerPreview';
 
-const WriterList = ({ t, writers, colAmount = 4 }) => {
-  const col = []; // подмассив в котором будут массивы по colAmount элемента.
-  let i = 0;
-  while (i < writers.length) {
-    col.push(writers.slice(i, (i += colAmount)));
-  }
+const WriterList = ({ t, writers }) => {
 
   return (
     <div className="writers-list">
-      {col.map((items, i) => (
-        <div key={i}>
-          <Row gutter={16}>
-            {items.map((item, j) => (
-              <Col xs={24} sm={12} md={8} lg={6} key={j}>
-                <WriterPreview {...item} t={t} />
-                <Divider className="show-small author-devider" />
-              </Col>
-            ))}
-          </Row>
-        </div>
-      ))}
+      <List
+        grid={{
+          gutter: 16,
+          xs: 1,
+          sm: 2,
+          md: 3,
+          lg: 4,
+        }}
+        dataSource={writers}
+        renderItem={item => (
+          <List.Item>
+            <WriterPreview {...item} t={t} />
+          </List.Item>
+        )}
+      />
     </div>
   );
 };
