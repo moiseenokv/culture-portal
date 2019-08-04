@@ -1,28 +1,33 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import Korotkevich from '../images/korotkevich.jpg';
-import sea from '../images/sea.jpg';
-import astronaut from '../images/gatsby-astronaut.png';
+import PropTypes from 'prop-types';
 
 import '../styles/author.css';
 
-const Gallery = () => {
+const Gallery = ({ data, t }) => {
+  const images = (item, i) => {
+    return (
+      <div key={i}>
+        <img src={item} />
+      </div>
+    );
+  };
+
   return (
-    <Carousel className="carousel" autoplay>
-    <div>
-      <img src={Korotkevich}/>
-    </div>
-    <div>
-      <img src={sea}/>
-    </div>
-    <div>
-      <img src={astronaut}/>
-    </div>
-    <div>
-      <h3>4</h3>
-    </div>
-  </Carousel>
-  )
-}
+    <>
+      <h2>{t('gallery')}</h2>
+      <div className="gallery">
+        <Carousel className="carousel" autoplay>
+          {data.img.map(images)}
+        </Carousel>
+      </div>
+    </>
+  );
+};
+
+Gallery.propTypes = {
+  data: PropTypes.object,
+  t: PropTypes.func.isRequired,
+};
 
 export default Gallery;

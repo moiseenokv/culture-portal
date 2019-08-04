@@ -11,10 +11,7 @@
 }
 
 .gallery img {
-  width: 500px;
-  position: absolute;   
-  top: 50%;
-  transform: translateY(-50%);
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -55,6 +52,56 @@
 }
 
 .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
-  left: 18%;
+  left: 16%;
   width: 30%;
+}
+
+.masterpieces {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+    left: 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+    left: 14%;
+  }
+
+  .gallery div,
+  .carousel,
+  .map,
+  .gallery img {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery div,
+  .carousel,
+  .map,
+  .gallery img {
+    width: 290px;
+    height: 290px;
+  }
+
+  .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+    left: 13%;
+  }
+
+  .ant-carousel .slick-slide img {
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
+    left: 10%;
+  }
 }

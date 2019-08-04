@@ -1,58 +1,70 @@
 import React from 'react';
-import { Layout, Divider, Row, Col } from 'antd';
-import Korotkevich from '../images/korotkevich.jpg'
+import { Layout, Divider } from 'antd';
+import { graphql } from 'gatsby';
+import { withI18next } from 'gatsby-plugin-i18next';
+import { withNamespaces } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 import Layer from '../components/layer';
 import Developers from '../components/developers';
-import '../styles/main.css'
-import { Link } from 'gatsby';
+import '../styles/main.css';
+import AuthorOfTheDay from '../components/authorOfTheDay';
 
-const Main = () => {
+import mainPhoto from '../images/main-page.jpg';
+
+const Main = ({ data, t }) => {
+  const authorOfTheDayId = new Date().getDay() % data.allDataJson.edges.length;
+  const { node } = data.allDataJson.edges[authorOfTheDayId];
+  const authorOfTheDay = Object.assign(
+    { title: node.title2 },
+    JSON.parse(node.snippet)
+  );
 
   const { Content } = Layout;
   return (
     <div>
-      <Layer path='/'>
+      <Layer path="/" t={t}>
         <Layout className="layout">
-          <Content className='content'>
-            <div className='content-wrapper'>
-              <h1>Писатели Беларуси</h1>
-              <p className="writers-about">Белорусская литература условно делится на несколько периодов: «Давняя (древняя)
-                белорусская литература» (ХI—ХVІІ вв.), «Новая беларуская литература» (перв.пол. XVIII—ХІХ в.в.)
-                , и «Новейшая белорусская литература» (литература от начала ХХ в.). Литература первой половины
-                XVIII в. определяется как «Литература переходного периода» — время, когда формировались основы
-                новой поэтики. Литература второй половины XVIII ст. – первой четверти ХІХ ст. именуется как
-                «Литература эпохи Просветительства». Белорусскую литературу от середины 20-х гг. до конца ХІХ в.
-                воодушевляла романтичная мысль про национальное Возрождение. Романтичный пафос
-                этого этапа предопределяет и его название — «Литература эпохи романтизма».
-              </p>
+          <Content className="content">
+            <div className="content-wrapper">
+              <h1>{t('mainTitle')}</h1>
+              <img alt="writers" src={mainPhoto} />
+              <p className="writers-about">{t('portalDescription')}</p>
               <Divider />
-              <h2 className='author-of-the-day'>Автор дня</h2>
-              <Layout className="layout">
-                <Link to='/author'>
-                  <Row type='flex' justify='center'>
-                    <Col span={4}>
-                      <img className='author-of-the-day-img' alt='Короткевич' src={Korotkevich} />
-                    </Col>
-                    <Col span={16} offset={1}>
-                      <h3>Короткевич, Владимир Семёнович</h3>
-                      <p className="life-dates" >26 ноября 1930 - 25 июля 1984 (53 года)</p>
-                      <p>Белорусский советский писатель, поэт, драматург, сценарист и публицист, классик белорусской
-                        литературы. Является одной из наиболее ярких фигур в белорусской литературе XX столетия.
-                        Стал первым белорусским писателем, обратившимся к жанру исторического детектива.
-                      </p>
-                    </Col>
-                  </Row>
-                </Link>
-              </Layout>
-              <Divider/>
-              <Developers/>
+              <AuthorOfTheDay data={authorOfTheDay} t={t} />
+              <Divider />
+              <Developers t={t} />
             </div>
           </Content>
         </Layout>
       </Layer>
     </div>
-  )
+  );
 };
 
-export default Main;
+Main.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object),
+  t: PropTypes.func,
+};
+
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
+      ...TranslationFragment
+    }
+
+    allDataJson(
+      filter: { language: { eq: $lng } }
+      sort: { fields: [title2], order: ASC }
+    ) {
+      edges {
+        node {
+          title2
+          snippet
+        }
+      }
+    }
+  }
+`;
+
+export default withI18next()(withNamespaces()(Main));

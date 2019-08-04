@@ -1,36 +1,35 @@
 import React from 'react';
-import { Divider, Col, Row } from 'antd';
+import { List } from 'antd';
 import PropTypes from 'prop-types';
 
 import '../styles/writers.css';
 import WriterPreview from './writerPreview';
 
-const WriterList = ({ writers, colAmount = 4 }) => {
-  const col = [];// подмассив в котором будут массивы по colAmount элемента.
-  let i = 0;
-  while (i < writers.length) {
-    col.push(writers.slice(i, i += colAmount));
-  }
+const WriterList = ({ t, writers }) => {
 
   return (
     <div className="writers-list">
-      {col.map((items, i) => (
-        <div key={i}>
-          <Row gutter={16}>
-            {items.map((item, j) => (
-              <Col span={6} key={j}>
-                <WriterPreview {...item}/>
-              </Col>
-            ))}
-          </Row>
-          <Divider/>
-        </div>
-      ))}
+      <List
+        grid={{
+          gutter: 16,
+          xs: 1,
+          sm: 2,
+          md: 3,
+          lg: 4,
+        }}
+        dataSource={writers}
+        renderItem={item => (
+          <List.Item>
+            <WriterPreview {...item} t={t} />
+          </List.Item>
+        )}
+      />
     </div>
   );
 };
 
 WriterList.propTypes = {
+  t: PropTypes.func.isRequired,
   colAmount: PropTypes.number,
   writers: PropTypes.array.isRequired,
 };

@@ -1,25 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Layout, Row, Col } from 'antd';
+
 import Header from './header';
-// import { Layout } from 'antd';
-
 import '../styles/layout.css';
-import '../styles/developers.css';
+import '../styles/footer.css';
 
-const Layer = ({ children, path }) => {
-  // const { Footer } = Layout;
+const Layer = ({ children, path, t }) => {
+  const { Footer } = Layout;
   return (
-  <div>
-    <Header path={path} />
-    <main>{children}</main>
-    {/* <Footer/> */}
-  </div>
-  )
+    <div>
+      <Header path={path} t={t} />
+      <main>{children}</main>
+      <Footer>
+        <Row>
+          <Col className="rights" xs={24} sm={16} md={8}>
+            RSSchool <span>&copy;</span>2019 | Created by Team 14.
+          </Col>
+          <Col className="contribution" xs={24} sm={8} md={8} offset={8}>
+            <a
+              href={`https://docs.google.com/spreadsheets/d/1_HYtfPoTEGPdKPDmKHn8llA4757YDZpWdh7JNcFt03I/edit#gid=569398064`}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Workflow
+            </a>
+          </Col>
+        </Row>
+      </Footer>
+    </div>
+  );
 };
 
 Layer.propTypes = {
   children: PropTypes.node,
   path: PropTypes.string,
+  t: PropTypes.func.isRequired,
 };
 
 export default Layer;

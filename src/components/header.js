@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-i18next';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Layout, Menu, Col, Row } from 'antd';
@@ -14,31 +14,29 @@ class Header extends Component {
     };
   }
 
-  selectDefaultPath = () => {
-    const { selectedKeyPath } = this.state;
-    if (selectedKeyPath === '/' || selectedKeyPath === '/writers') {
-      return selectedKeyPath;
-    } else return '/';
-  };
-
   render() {
+    let { selectedKeyPath } = this.state;
     return (
       <div>
-        <Layout className='layout'>
+        <Layout className="layout">
           <Layout.Header>
             <Row>
-              <Col span={4}>
-                <LanguageSwitcher/>
+              <Col xs={7} sm={4}>
+                <LanguageSwitcher />
               </Col>
-              <Col span={20}>
+              <Col xs={17} sm={20}>
                 <Menu
-                  theme='dark'
-                  mode='horizontal'
-                  defaultSelectedKeys={[this.selectDefaultPath()]}
-                  className='navigation'
+                  theme="dark"
+                  mode="horizontal"
+                  defaultSelectedKeys={[`${selectedKeyPath}`]}
+                  className="navigation"
                 >
-                  <Menu.Item key='/'><Link to='/'>На Главную</Link></Menu.Item>
-                  <Menu.Item key='/writers'><Link to='/writers'>Писатели</Link></Menu.Item>
+                  <Menu.Item key="/">
+                    <Link to="/">{this.props.t('menuHome')}</Link>
+                  </Menu.Item>
+                  <Menu.Item key="/writers">
+                    <Link to="/writers">{this.props.t('menuWriters')}</Link>
+                  </Menu.Item>
                 </Menu>
               </Col>
             </Row>
@@ -51,6 +49,7 @@ class Header extends Component {
 
 Header.propTypes = {
   path: PropTypes.string,
+  t: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -7,6 +7,7 @@
   width: 100%;
   padding-left: 10px;
   height: 40px;
+  border: 1px solid #00000082;
 }
 
 .search:focus {
@@ -24,7 +25,6 @@
 }
 
 .single-writer {
-  width: 100%;
   text-decoration: none;
   color: #000;
 }
@@ -38,14 +38,14 @@
 }
 
 .writer-listPage-block p {
-  text-align: left;
+  text-align: center;
 }
 
-.writer-listPage-block div {
+.writer-birth-place {
   color: #808080;
 }
 
-.writer-listPage-block:hover, 
+.writer-listPage-block:hover,
 .single-writer:hover {
   transition: 0.4s;
   color: #000;
@@ -68,20 +68,67 @@
   background: #fff;
   padding: 24px;
   min-height: 280px;
+  display: inline-block;
+  width: 100%;
 }
 
+.writer-birth-place {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.writers-list .ant-row {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 15px;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .writer-listPage-block p {
+    text-align: center;
+  }
+
+  .writer-birth-place {
+    width: 100%;
+  }
+}
+
+@media (max-width: 565px) {
+  .writer-birth-place {
+    max-height: 70px;
+    min-height: 20px;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .writers-about {
+    font-size: 3vw;
+  }
+
+  .content {
+    padding: 0;
+  }
+}
+
+/* autoprefixer: off */
 .writer-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 3;
   margin: 0;
-}
-
-.writer-birth-place {
-  height: 42px;
-}
-
-.writers-list .ant-row {
-  padding-bottom: 10px;
 }

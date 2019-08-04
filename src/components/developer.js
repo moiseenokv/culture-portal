@@ -6,14 +6,18 @@ import '../styles/developers.css';
 
 import github from '../images/github.png';
 
-const Developer = (props) => (
-  <Col span={4}>
+const Developer = props => (
+  <Col xs={12} sm={8} md={6} lg={6} xl={4}>
     <div className="developer-card">
-      <a href={`https://github.com/${props.login}`} rel="noopener noreferrer" target='_blank'>
+      <a
+        href={`https://github.com/${props.login}`}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <p>{props.name}</p>
-        <img alt={props.name} src={props.avatarSrc}/>
+        <img alt={props.name} src={props.avatarSrc} />
         <div className="github">
-          <img alt={props.login} src={github}/>
+          <img alt={props.login} src={github} />
           <span>{props.login}</span>
         </div>
       </a>

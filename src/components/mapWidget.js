@@ -1,21 +1,16 @@
-import React, { Component } from 'react'
-import { Map, TileLayer, Marker } from 'react-leaflet'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import PropTypes from 'prop-types';
 
 import '../styles/author.css';
 
-class MyMap extends Component {
-  constructor() {  
-    super(); 
-  }
-
-  render() {
-    // const { coordinates } = this.props;
-    // const position = [this.state.lat, this.state.lng]
-    if (typeof window !== 'undefined') {
-      return (
-        <Map coordinates
-          className='map'
+const MyMap = ({ data, t }) => {
+  if (typeof window !== 'undefined') {
+    return (
+      <>
+        <h2>{t('mapPlaces')}</h2>
+        <Map
+          className="map"
           center={[54, 28]}
           zoom={5.7}
           maxZoom={10}
@@ -23,20 +18,23 @@ class MyMap extends Component {
           scrollWheelZoom={true}
           dragging={true}
         >
-          <TileLayer 
+          <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors" 
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {this.props.data.map((element, i) => <Marker key={i} position={element}/> )}
+          {data.map((element, i) => (
+            <Marker key={i} position={element} />
+          ))}
         </Map>
-      )
-    }
-    return null  
-  } 
-}
+      </>
+    );
+  }
+  return null;
+};
 
 MyMap.propTypes = {
+  t: PropTypes.func.isRequired,
   data: PropTypes.array,
-}
+};
 
 export default MyMap;
