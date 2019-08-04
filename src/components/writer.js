@@ -10,6 +10,7 @@ import MyVideo from './videoWidget';
 import MyMap from './mapWidget';
 import TimeLine from './timeLine';
 import Gallery from './gallery';
+import Masterpieces from './masterpieces';
 
 import '../styles/author.css';
 
@@ -20,8 +21,7 @@ const AuthorPage = ({ data, t }) => {
   const timeline = JSON.parse(dataToShow.timeline);
   const mapPlaces = JSON.parse(dataToShow.mapPlaces);
   const video = dataToShow.video;
-  const masterpieces = JSON.parse(dataToShow.masterpieces);//todo add masterpiece component
-
+  const masterpieces = JSON.parse(dataToShow.masterpieces);
   const { Content } = Layout;
   return (
     <div>
@@ -34,6 +34,8 @@ const AuthorPage = ({ data, t }) => {
               <Gallery data={gallery} t={t}/>
               <Divider/>
               <TimeLine data={timeline} t={t}/>
+              <Divider/>
+              <Masterpieces data={masterpieces} t={t}/>
               <Divider/>
               <MyMap data={mapPlaces} t={t}/>
               <Divider/>
