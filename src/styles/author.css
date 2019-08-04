@@ -11,10 +11,7 @@
 }
 
 .gallery img {
-  width: 500px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -57,4 +54,20 @@
 .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
   left: 18%;
   width: 30%;
+}
+
+.masterpieces {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  .gallery div,
+  .carousel,
+  .map,
+  .gallery img {
+    width: 320px;
+    height: 320px;
+  }
 }

@@ -85,3 +85,35 @@
 .writers-list .ant-row {
   padding-bottom: 10px;
 }
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 15px;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .writer-listPage-block p {
+    text-align: center;
+  }
+
+  .writer-birth-place {
+    height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .writers-about {
+    font-size: 3vw;
+  }
+
+  .content {
+    padding: 0;
+  }
+}

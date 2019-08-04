@@ -1,0 +1,20 @@
+.rights {
+  padding-left: 30px;
+}
+
+.rights span {
+  font-size: 10px;
+}
+
+.contribution {
+  padding-right: 30px; 
+  text-align: right;
+}
+
+.contribution a {
+  color: rgba(105, 105, 105, 0.719);
+}
+
+.contribution a:hover {
+  text-decoration: underline;
+}

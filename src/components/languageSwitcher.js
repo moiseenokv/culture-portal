@@ -4,29 +4,29 @@ import { Select } from 'antd';
 import PropTypes from 'prop-types';
 
 const LanguageSwitcher = ({ changeLng, lng, availableLngs }) => (
-  <Select
-    defaultValue={lng}
-    className="change-language"
-    onChange={chosenLang => changeLng(chosenLang)}
-  >
-    {availableLngs.map(curValue => (
-      <Select.Option value={curValue} key={curValue}>
-        {curValue}
-      </Select.Option>
-    ))}
-  </Select>
+	<Select
+		defaultValue={lng}
+		className="change-language"
+		onChange={chosenLang => changeLng(chosenLang)}
+	>
+		{availableLngs.map(curValue => (
+			<Select.Option value={curValue} key={curValue}>
+				{curValue}
+			</Select.Option>
+		))}
+	</Select>
 );
 
 LanguageSwitcher.propTypes = {
-  lng: PropTypes.string,
-  availableLngs: PropTypes.array,
-  changeLng: PropTypes.func,
+	lng: PropTypes.string,
+	availableLngs: PropTypes.array,
+	changeLng: PropTypes.func,
 };
 
 export default function Switcher(props) {
-  return (
-    <Language>
-      {lngProps => <LanguageSwitcher {...props} {...lngProps} />}
-    </Language>
-  );
+	return (
+		<Language>
+			{lngProps => <LanguageSwitcher {...props} {...lngProps} />}
+		</Language>
+	);
 }

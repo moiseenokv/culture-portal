@@ -9,8 +9,8 @@
     "babel-eslint": "^10.0.2",
     "gatsby": "2.0.76",
     "gatsby-image": "^2.2.6",
-    "gatsby-plugin-i18next": "^1.1.7",
     "gatsby-plugin-antd": "^2.0.2",
+    "gatsby-plugin-i18next": "^1.1.7",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.1.6",
     "gatsby-plugin-offline": "^2.2.4",
@@ -38,9 +38,6 @@
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -50,13 +47,11 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "lint": "eslint ./src/**/*.js --fix"
+    "lint": "eslint ./src/**/*.js --fix",
+    "prettier": "prettier --single-quote --use-tabs --trailing-comma es5 --write \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/moiseenokv/culture-portal.git"
   }
 }
