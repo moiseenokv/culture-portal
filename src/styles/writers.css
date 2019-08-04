@@ -102,6 +102,12 @@
   }
 }
 
+@media (max-width: 350px) {
+  .writer-birth-place {
+    height: 50px;
+  }
+}
+
 @media (max-width: 500px) {
   .writers-about {
     font-size: 3vw;
