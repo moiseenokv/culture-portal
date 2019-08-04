@@ -37,5 +37,5 @@ export default class MyVideo extends React.Component {
 
 MyVideo.propTypes = {
   data: PropTypes.string,
-  title: PropTypes.string,
+  t: PropTypes.func,
 };
