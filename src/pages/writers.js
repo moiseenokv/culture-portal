@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Divider } from 'antd';
+import { Layout } from 'antd';
 import { graphql } from 'gatsby';
 import { withNamespaces } from 'react-i18next';
 import { withI18next } from 'gatsby-plugin-i18next';
