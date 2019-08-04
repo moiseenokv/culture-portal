@@ -41,7 +41,7 @@ const AuthorPage = ({ data, t }) => {
               <Divider />
               <MyMap data={mapPlaces} t={t} />
               <Divider />
-              <MyVideo url={video} title="Karatkevich" />
+              <MyVideo data={video} />
               <Divider />
             </div>
           </Content>
