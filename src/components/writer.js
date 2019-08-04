@@ -16,13 +16,13 @@ import Masterpieces from './masterpieces';
 import '../styles/author.css';
 
 const AuthorPage = ({ data, t }) => {
-  const dataToShow = data.dataJson; //todo add err handler
+  const dataToShow = data.dataJson;
   const writerCard = JSON.parse(dataToShow.snippet);
   const gallery = JSON.parse(dataToShow.gallery);
   const timeline = JSON.parse(dataToShow.timeline);
   const mapPlaces = JSON.parse(dataToShow.mapPlaces);
   const video = dataToShow.video;
-  const masterpieces = JSON.parse(dataToShow.masterpieces); //todo add masterpiece component
+  const masterpieces = JSON.parse(dataToShow.masterpieces);
 
   const { Content } = Layout;
   return (
