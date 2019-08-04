@@ -24,7 +24,6 @@
 }
 
 .single-writer {
-  width: 100%;
   text-decoration: none;
   color: #000;
 }
@@ -41,7 +40,7 @@
   text-align: center;
 }
 
-.writer-listPage-block div {
+.writer-birth-place {
   color: #808080;
 }
 
@@ -70,25 +69,12 @@
   min-height: 280px;
 }
 
-.writer-description {
-  /* display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  margin: 0; */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  margin: 0;
-}
-
 .writer-birth-place {
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .writers-list .ant-row {
@@ -113,12 +99,7 @@
   }
 
   .writer-birth-place {
-    /* height: 30px; */
-    /* font-size: 0.7rem; */
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
     width: 100%;
-    /* white-space: nowrap; */
   }
 }
 
@@ -138,4 +119,13 @@
   .content {
     padding: 0;
   }
+}
+
+/* autoprefixer: off */
+.writer-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  margin: 0;
 }
