@@ -36,6 +36,8 @@ const AuthorPage = ({ data, t }) => {
               <Divider />
               <TimeLine data={timeline} t={t} />
               <Divider />
+              <Masterpieces data={masterpieces} t={t}/>
+              <Divider/>
               <MyMap data={mapPlaces} t={t} />
               <Divider />
               <MyVideo url={video} title="Karatkevich" />
