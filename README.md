@@ -2,7 +2,8 @@
 <h1 align="center">
   CodeJam Culture Portal: Writers of Belarus. 
 </h1>
-### При разработке использовались : Gatsby, Netlify CMS
+
+### При разработке использовались : Gatsby, Netlify CMS, React i18n, Ant Design, React-Leaflet
 
 ### https://nifty-torvalds-a62528.netlify.com/         - сайт 
 
