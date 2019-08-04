@@ -20,6 +20,7 @@ export default class MyVideo extends React.Component {
   render() {
     return (
       <div>
+        <h2>{this.props.t("writerVideo")}</h2>
         <ModalVideo
           channel="youtube"
           isOpen={this.state.isOpen}
@@ -36,5 +37,5 @@ export default class MyVideo extends React.Component {
 
 MyVideo.propTypes = {
   data: PropTypes.string,
-  title: PropTypes.string,
+  t: PropTypes.func,
 };
