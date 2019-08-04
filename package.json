@@ -38,9 +38,6 @@
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -54,9 +51,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/moiseenokv/culture-portal.git"
   }
 }

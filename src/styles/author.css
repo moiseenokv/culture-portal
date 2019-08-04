@@ -59,6 +59,12 @@
   width: 30%;
 }
 
+.masterpieces {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+}
+
 @media (max-width: 500px) {
   .gallery div,
   .carousel,
