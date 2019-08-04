@@ -52,16 +52,19 @@
 }
 
 .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
-  left: 18%;
+  left: 15%;
   width: 30%;
 }
 
 .masterpieces {
   margin: 0 auto;
   max-width: 400px;
-  text-align: left;
+  text-align: center;
 }
-
+.masterpieces-item {
+  margin: 0 auto;
+  text-align: center;
+}
 @media (max-width: 500px) {
   .gallery div,
   .carousel,
