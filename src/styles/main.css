@@ -156,3 +156,9 @@ h3 {
     font-size: 18px;
   }
 }
+
+@media (max-width: 350px) {
+  .rights {
+    width: 225px;
+  }
+}

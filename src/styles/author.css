@@ -72,6 +72,14 @@
   .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
     left: 14%;
   }
+
+  .gallery div,
+  .carousel,
+  .map,
+  .gallery img {
+    width: 420px;
+    height: 420px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -90,6 +98,6 @@
 
 @media (max-width: 400px) {
   .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
-    left: 11%;
+    left: 10%;
   }
 }
