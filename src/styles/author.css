@@ -94,6 +94,10 @@
   .author-page .ant-timeline.ant-timeline-alternate .ant-timeline-item-right .ant-timeline-item-content {
     left: 13%;
   }
+
+  .ant-carousel .slick-slide img {
+    width: auto;
+  }
 }
 
 @media (max-width: 400px) {
