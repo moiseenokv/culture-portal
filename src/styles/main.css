@@ -151,4 +151,14 @@ h3 {
   .author-devider {
     margin: 15px 0;
   }
+
+  .developers-header {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .rights {
+    width: 225px;
+  }
 }
