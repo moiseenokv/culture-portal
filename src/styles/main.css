@@ -64,7 +64,8 @@ h3 {
   }
 
   .author-of-the-day-img {
-    height: auto;
+    height: 100%;
+    width: auto;
   }
 
   .ant-layout-header,
@@ -88,6 +89,25 @@ h3 {
   .writers-about {
     font-size: 2.5vw;
   }
+
+  .contribution {
+    margin: 0;
+  }
+
+  .rights {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 565px) {
+  .rights {
+    text-align: center;
+  }
+
+  .contribution {
+    text-align: center;
+    padding: 10px 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -98,6 +118,7 @@ h3 {
 
   .author-of-the-day-img {
     height: 70vw;
+    width: auto;
   }
 
   .ant-layout-header {
