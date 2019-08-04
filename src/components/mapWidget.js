@@ -6,14 +6,11 @@ import '../styles/author.css';
 
 class MyMap extends Component {
   render() {
-    // const { coordinates } = this.props;
-    // const position = [this.state.lat, this.state.lng]
     if (typeof window !== 'undefined') {
       return (
         <>
           <h2>{this.props.t('mapPlaces')}</h2>
-          <Map coordinates
-               className='map'
+          <Map className='map'
                center={[54, 28]}
                zoom={5.7}
                maxZoom={10}
@@ -22,8 +19,8 @@ class MyMap extends Component {
                dragging={true}
           >
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution="&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+              attribution='&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
             />
             {this.props.data.map((element, i) => <Marker key={i} position={element}/>)}
           </Map>
