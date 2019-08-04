@@ -6,7 +6,7 @@
 .developer-card:hover {
   background: rgb(149, 149, 156);
   transition: 0.5s;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .developer-card p {
@@ -49,6 +49,6 @@
   cursor: pointer;
 }
 
-.developers > div {
+.developers>div {
   padding: 0 5px;
 }

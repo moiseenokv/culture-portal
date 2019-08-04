@@ -17,11 +17,11 @@ const NotFoundPage = ({ t }) => (
 
 NotFoundPage.propTypes = {
   t: PropTypes.func,
-}
+};
 
 export const query = graphql`
   query($lng: String!) {
-    locales: allLocale(filter: {lng: {eq: $lng}, ns: {eq: "messages"}}) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
       ...TranslationFragment
     }
   }

@@ -11,15 +11,18 @@ import '../styles/main.css';
 import AuthorOfTheDay from '../components/authorOfTheDay';
 
 const Main = ({ data, t }) => {
-  const authorOfTheDay = Object.assign({ title: data.dataJson.title2 }, JSON.parse(data.dataJson.snippet));
+  const authorOfTheDay = Object.assign(
+    { title: data.dataJson.title2 },
+    JSON.parse(data.dataJson.snippet)
+  );
 
   const { Content } = Layout;
   return (
     <div>
-      <Layer path='/' t={t}>
+      <Layer path="/" t={t}>
         <Layout className="layout">
-          <Content className='content'>
-            <div className='content-wrapper'>
+          <Content className="content">
+            <div className="content-wrapper">
               <h1>{t('mainTitle')}</h1>
               <p className="writers-about">{t('portalDescription')}</p>
               <Divider />
@@ -31,21 +34,21 @@ const Main = ({ data, t }) => {
         </Layout>
       </Layer>
     </div>
-  )
+  );
 };
 
 Main.propTypes = {
   data: PropTypes.objectOf(PropTypes.object),
   t: PropTypes.func,
-}
+};
 
 export const query = graphql`
   query($lng: String!) {
-    locales: allLocale(filter: {lng: {eq: $lng}, ns: {eq: "messages"}}) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
       ...TranslationFragment
     }
 
-    dataJson(language: {eq: $lng}){
+    dataJson(language: { eq: $lng }) {
       title2
       snippet
     }

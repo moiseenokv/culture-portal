@@ -10,7 +10,7 @@ const MyMap = ({ data, t }) => {
       <>
         <h2>{t('mapPlaces')}</h2>
         <Map
-          className='map'
+          className="map"
           center={[54, 28]}
           zoom={5.7}
           maxZoom={10}
@@ -20,15 +20,17 @@ const MyMap = ({ data, t }) => {
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {data.map((element, i) => <Marker key={i} position={element} />)}
+          {data.map((element, i) => (
+            <Marker key={i} position={element} />
+          ))}
         </Map>
       </>
     );
   }
   return null;
-}
+};
 
 MyMap.propTypes = {
   t: PropTypes.func.isRequired,

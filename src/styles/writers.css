@@ -45,7 +45,7 @@
   color: #808080;
 }
 
-.writer-listPage-block:hover, 
+.writer-listPage-block:hover,
 .single-writer:hover {
   transition: 0.4s;
   color: #000;
