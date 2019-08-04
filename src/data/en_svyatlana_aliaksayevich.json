@@ -2,7 +2,7 @@
   "timeline": "{\n\"1972\":\"graduated from the Faculty of Journalism of the Belarusian State University, beginning work in the' Mayak of Communism '- a district newspaper in the town of Bereus, Brest Region\",\n\"1973-1976\":\"work in the Belarusian' Selskaya Gazeta '\",\n\"1976-1984\":\"the head of the essay and journalism department of the magazine' Neman '\",\n\"1983\":\"the entry into the Union of Soviet Writers on the recommendation of A. Adamovich, J. Bryl, V. Bykov and V. Vitki\",\n\"2000-2013\":\"Accommodation in Italy, France, Germany\"\n}",
   "masterpieces": "[\n{\"title\":\"The war does not have a female face\",\"year\":\"1949\"},\n{\"title\":\"Zinc boys\",\"year\":\"1957\"},\n{\"title\":\"Charmed with Death\",\"year\":\"1958\"},\n{\"title\":\"Chernobyl Prayer\",\"year\":\"1968\"},\n{\"title\":\"Second hand time\",\"year\":\"1997\"}\n]",
   "mapPlaces": "[[48.9163,24.7105], [52.3113,28.8142], [51.7939,29.4998], [52.5441,24.9666]]",
-  "gallery": "{\n\"img\":[\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"],\n     [\"pict.jpg\",\"lat\",\"description\"]]\n}",
+  "gallery": "{\n  \"img\": [\n    \"https://m.buro247.ru/images/logos/670x830_alex.jpg\",\n    \"https://officelife.media/upload/iblock/e6b/e6baa7489f99d3087ba8292bd169088d.jpg\",\n    \"https://images-eu.ssl-images-amazon.com/images/I/51T8C3SBi5L.jpg\",\n    \"http://kolomna-art.pro/wp-content/uploads/2015/10/TSinkovyie-malchiki.jpg\"\n  ]\n}",
   "title": "en_svyatlana_aliaksayevich",
   "language": "en",
   "title2": "svyatlana_aliaksayevich",
