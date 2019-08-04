@@ -10,6 +10,8 @@ import Developers from '../components/developers';
 import '../styles/main.css';
 import AuthorOfTheDay from '../components/authorOfTheDay';
 
+import mainPhoto from '../images/main-page.jpg';
+
 const Main = ({ data, t }) => {
   const authorOfTheDay = Object.assign({ title: data.dataJson.title2 }, JSON.parse(data.dataJson.snippet));
 
@@ -21,6 +23,7 @@ const Main = ({ data, t }) => {
           <Content className='content'>
             <div className='content-wrapper'>
               <h1>{t('mainTitle')}</h1>
+              <img alt="writers" src={mainPhoto} />
               <p className="writers-about">{t('portalDescription')}</p>
               <Divider />
               <AuthorOfTheDay data={authorOfTheDay} t={t} />
