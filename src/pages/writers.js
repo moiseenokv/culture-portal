@@ -3,6 +3,7 @@ import { Layout, Divider } from 'antd';
 import { graphql } from 'gatsby';
 import { withNamespaces } from 'react-i18next';
 import { withI18next } from 'gatsby-plugin-i18next';
+import PropTypes from 'prop-types';
 
 import Layer from '../components/layer';
 import WriterList from '../components/writerList';
@@ -15,7 +16,8 @@ class Writers extends Component {
     let initialData = [];
     if (props.data.allDataJson) {
       initialData = props.data.allDataJson.edges.map(({ node }) =>
-        Object.assign({ title: node.title2 }, JSON.parse(node.snippet)));
+        Object.assign({ title: node.title2 }, JSON.parse(node.snippet))
+      );
     }
     this.state = {
       data: initialData,
@@ -23,7 +25,7 @@ class Writers extends Component {
     };
   }
 
-  handleSearch = (e) => {
+  handleSearch = e => {
     let search = e.target.value;
     const { data } = this.state;
 
@@ -33,27 +35,29 @@ class Writers extends Component {
     }
 
     search = search.toLowerCase();
-    const result = data.filter(({ fullName, birthCity }) =>
-      fullName.toLowerCase().includes(search)
-      || birthCity.toLowerCase().includes(search));
+    const result = data.filter(
+      ({ fullName, birthCity }) =>
+        fullName.toLowerCase().includes(search) ||
+        birthCity.toLowerCase().includes(search)
+    );
 
     this.setState({ search: result });
   };
 
   render() {
     return (
-      <Layout className='layer'>
-        <Layer path='/writers' t={this.props.t}>
-          <Layout.Content className='content'>
-            <div className='content-wrapper'>
+      <Layout className="layer">
+        <Layer path="/writers" t={this.props.t}>
+          <Layout.Content className="content">
+            <div className="content-wrapper">
               <h1>{this.props.t('writersTitle')}</h1>
               <input
                 className="search"
-                placeholder='search by name and place of birth'
+                placeholder="search by name and place of birth"
                 onChange={this.handleSearch}
               />
-              <Divider/>
-              <WriterList writers={this.state.search} t={this.props.t}/>
+              <Divider />
+              <WriterList writers={this.state.search} t={this.props.t} />
             </div>
           </Layout.Content>
         </Layer>
@@ -68,14 +72,9 @@ export const query = graphql`
       ...TranslationFragment
     }
     allDataJson(
-    filter: {language: {eq: $lng}},
-    sort: {
-      fields: [
-        title2
-      ]
-      order: ASC
-    }
-  ) {
+      filter: { language: { eq: $lng } }
+      sort: { fields: [title2], order: ASC }
+    ) {
       edges {
         node {
           title2
@@ -85,5 +84,10 @@ export const query = graphql`
     }
   }
 `;
+
+Writers.propTypes = {
+  t: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+};
 
 export default withI18next()(withNamespaces()(Writers));
