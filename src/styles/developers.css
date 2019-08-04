@@ -1,7 +1,7 @@
 .developer-card {
   border: 1px solid rgb(180, 174, 174);
   background: rgb(205, 216, 211);
-  margin: 5px 0;
+  margin: 5px;
 }
 
 .developer-card:hover {
@@ -34,9 +34,8 @@
   justify-content: center;
 }
 
-
 .developers-header {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 

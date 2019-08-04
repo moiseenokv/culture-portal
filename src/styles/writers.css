@@ -67,6 +67,7 @@
   background: #fff;
   padding: 24px;
   min-height: 280px;
+  display: inline-block;
 }
 
 .writer-birth-place {

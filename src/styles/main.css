@@ -151,4 +151,8 @@ h3 {
   .author-devider {
     margin: 15px 0;
   }
+
+  .developers-header {
+    font-size: 18px;
+  }
 }
