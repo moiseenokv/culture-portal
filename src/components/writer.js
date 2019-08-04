@@ -21,7 +21,7 @@ const AuthorPage = ({ data, t }) => {
   const timeline = JSON.parse(dataToShow.timeline);
   const mapPlaces = JSON.parse(dataToShow.mapPlaces);
   const video = dataToShow.video;
-  const masterpieces = JSON.parse(dataToShow.masterpieces);//todo add masterpiece component
+  // const masterpieces = JSON.parse(dataToShow.masterpieces);//todo add masterpiece component
 
   const { Content } = Layout;
   return (
