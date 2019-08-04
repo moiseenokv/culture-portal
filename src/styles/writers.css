@@ -37,10 +37,10 @@
 }
 
 .writer-listPage-block p {
-  text-align: left;
+  text-align: center;
 }
 
-.writer-listPage-block div {
+.writer-birth-place {
   color: #808080;
 }
 
@@ -74,6 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .writers-list .ant-row {
@@ -98,13 +99,15 @@
   }
 
   .writer-birth-place {
-    height: 40px;
+    width: 100%;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 565px) {
   .writer-birth-place {
-    height: 50px;
+    max-height: 70px;
+    min-height: 20px;
+    height: auto;
   }
 }
 
