@@ -10,19 +10,22 @@ class MyMap extends Component {
       return (
         <>
           <h2>{this.props.t('mapPlaces')}</h2>
-          <Map className='map'
-               center={[54, 28]}
-               zoom={5.7}
-               maxZoom={10}
-               doubleClickZoom={true}
-               scrollWheelZoom={true}
-               dragging={true}
+          <Map
+            className="map"
+            center={[54, 28]}
+            zoom={5.7}
+            maxZoom={10}
+            doubleClickZoom={true}
+            scrollWheelZoom={true}
+            dragging={true}
           >
             <TileLayer
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-              attribution='&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            {this.props.data.map((element, i) => <Marker key={i} position={element}/>)}
+            {this.props.data.map((element, i) => (
+              <Marker key={i} position={element} />
+            ))}
           </Map>
         </>
       );
