@@ -58,14 +58,13 @@
 
 .masterpieces {
   margin: 0 auto;
-  max-width: 400px;
+  width: 100%;
   text-align: center;
 }
-.masterpieces-item {
-  margin: 0 auto;
-  text-align: center;
-}
+
+
 @media (max-width: 500px) {
+
   .gallery div,
   .carousel,
   .map,
