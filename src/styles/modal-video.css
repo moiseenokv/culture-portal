@@ -27,15 +27,11 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000000;
   cursor: pointer;
-  opacity: 1;
   animation-timing-function: ease-out;
   animation-duration: .3s;
   animation-name: modal-video;
-  -webkit-transition: opacity .3s ease-out;
-  -moz-transition: opacity .3s ease-out;
-  -ms-transition: opacity .3s ease-out;
-  -o-transition: opacity .3s ease-out;
-  transition: opacity .3s ease-out;
+  -webkit-transition: 1 .3s ease-out;
+  transition: 1 .3s ease-out;
 }
 
 .modal-video-effect-exit {
@@ -44,9 +40,6 @@
 
 .modal-video-effect-exit .modal-video-movie-wrap {
   -webkit-transform: translate(0, 100px);
-  -moz-transform: translate(0, 100px);
-  -ms-transform: translate(0, 100px);
-  -o-transform: translate(0, 100px);
   transform: translate(0, 100px);
 }
 
@@ -73,17 +66,8 @@
   background-color: #333;
   animation-timing-function: ease-out;
   animation-duration: .3s;
-  animation-name: modal-video-inner;
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -webkit-transition: -webkit-transform .3s ease-out;
-  -moz-transition: -moz-transform .3s ease-out;
-  -ms-transition: -ms-transform .3s ease-out;
-  -o-transition: -o-transform .3s ease-out;
-  transition: transform .3s ease-out;
+  -webkit-transition: translate(0, 0) .3s ease-out;
+  transition: translate(0, 0) .3s ease-out;
 }
 
 .modal-video-movie-wrap iframe {

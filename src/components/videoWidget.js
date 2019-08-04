@@ -23,7 +23,7 @@ export default class MyVideo extends React.Component {
         <ModalVideo
           channel="youtube"
           isOpen={this.state.isOpen}
-          videoId={this.props.url}
+          videoId={this.props.data}
           onClose={() => this.setState({ isOpen: false })}
         />
         <a onClick={this.openModal}>
@@ -35,6 +35,6 @@ export default class MyVideo extends React.Component {
 }
 
 MyVideo.propTypes = {
-  url: PropTypes.string,
+  data: PropTypes.string,
   title: PropTypes.string,
 };
