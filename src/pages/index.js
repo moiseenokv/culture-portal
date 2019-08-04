@@ -10,6 +10,8 @@ import Developers from '../components/developers';
 import '../styles/main.css';
 import AuthorOfTheDay from '../components/authorOfTheDay';
 
+import mainPhoto from '../images/main-page.jpg';
+
 const Main = ({ data, t }) => {
   const authorOfTheDayId = new Date().getDay() % data.allDataJson.edges.length;
   const { node } = data.allDataJson.edges[authorOfTheDayId];
@@ -23,6 +25,7 @@ const Main = ({ data, t }) => {
           <Content className='content'>
             <div className='content-wrapper'>
               <h1>{t('mainTitle')}</h1>
+              <img alt="writers" src={mainPhoto} />
               <p className="writers-about">{t('portalDescription')}</p>
               <Divider />
               <AuthorOfTheDay data={authorOfTheDay} t={t} />

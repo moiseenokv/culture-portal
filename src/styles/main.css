@@ -12,17 +12,12 @@
 }
 
 .life-dates {
-  font-size: 1.2vw;
   color: #808080;
-}
-
-.life-dates + p {
-  font-size: 1.5vw;
 }
 
 h3 {
   margin-top: 20px;
-  font-size: 2vw;
+  font-size: 1.5em;
 }
 
 .content {
@@ -38,4 +33,101 @@ h3 {
 .layout a {
   text-decoration: none;
   color: #000;
+}
+
+.show-small {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 5vw;
+    margin: 0 0 2vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+    margin: 3vw;
+  }
+
+  .show-small {
+    display: block;
+  }
+
+  .hide-small {
+    display: none;
+  }
+
+  .author-of-the-day-img {
+    height: auto;
+  }
+
+  .ant-layout-header,
+  .navigation {
+    line-height: 46px;
+    height: 46px;
+  }
+
+  .about-autor-of-day {
+    margin: 0;
+  }
+
+  .life-dates {
+    margin: 15px 0 5px;
+  }
+
+  .author-of-the-day {
+    padding: 0 10px;
+  }
+
+  .writers-about {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  p,
+  .navigation {
+    font-size: 3vw;
+  }
+
+  .author-of-the-day-img {
+    height: 70vw;
+  }
+
+  .ant-layout-header {
+    padding: 0 10px;
+  }
+
+  .ant-layout-header,
+  .ant-menu-horizontal {
+    line-height: 35px;
+    height: 35px;
+  }
+
+  .ant-select-selection--single {
+    height: 25px;
+  }
+
+  .ant-select-selection__rendered {
+    line-height: 23px;
+  }
+
+  .author-of-the-day {
+    margin: 15px -15px;
+    padding: 0 15px;
+  }
+
+  .ant-divider-horizontal {
+    margin: 0;
+  }
+
+  .author-devider {
+    margin: 15px 0;
+  }
 }

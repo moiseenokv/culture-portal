@@ -64,3 +64,13 @@
   max-width: 400px;
   text-align: left;
 }
+
+@media (max-width: 500px) {
+  .gallery div,
+  .carousel,
+  .map,
+  .gallery img {
+    width: 320px;
+    height: 320px;
+  }
+}
