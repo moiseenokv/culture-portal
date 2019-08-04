@@ -8,7 +8,11 @@ const WriterCard = ({ data }) => (
   <>
     <h1>{data.fullName}</h1>
     <img alt={data.fullName} src={data.photo} />
-    <h3>{(data.deathDate) ? (`${data.birthDate} - ${data.deathDate}`) : data.birthDate}</h3>
+    <h3>
+      {data.deathDate
+        ? `${data.birthDate} - ${data.deathDate}`
+        : data.birthDate}
+    </h3>
     <Row type="flex" justify="space-around">
       <Col span={14}>{data.description}</Col>
     </Row>

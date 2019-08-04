@@ -18,21 +18,25 @@ class Header extends Component {
     let { selectedKeyPath } = this.state;
     return (
       <div>
-        <Layout className='layout'>
+        <Layout className="layout">
           <Layout.Header>
             <Row>
-              <Col xs={7} sm={4}  >
+              <Col xs={7} sm={4}>
                 <LanguageSwitcher />
               </Col>
-              <Col xs={17} sm={20} >
+              <Col xs={17} sm={20}>
                 <Menu
-                  theme='dark'
-                  mode='horizontal'
+                  theme="dark"
+                  mode="horizontal"
                   defaultSelectedKeys={[`${selectedKeyPath}`]}
-                  className='navigation'
+                  className="navigation"
                 >
-                  <Menu.Item key='/'><Link to='/'>{this.props.t('menuHome')}</Link></Menu.Item>
-                  <Menu.Item key='/writers'><Link to='/writers'>{this.props.t('menuWriters')}</Link></Menu.Item>
+                  <Menu.Item key="/">
+                    <Link to="/">{this.props.t('menuHome')}</Link>
+                  </Menu.Item>
+                  <Menu.Item key="/writers">
+                    <Link to="/writers">{this.props.t('menuWriters')}</Link>
+                  </Menu.Item>
                 </Menu>
               </Col>
             </Row>

@@ -9,18 +9,15 @@ class Masterpieces extends Component {
         <>
           <h2>{this.props.t('masterpieces')}</h2>
           <List
-          className="masterpieces"
-          itemLayout="horizontal"
-          dataSource={this.props.data}
-          renderItem={item => (
-            <List.Item>
-              <List.Item.Meta
-                title={item.title}
-                description={item.year}
-              />
-            </List.Item>
-          )}
-        />
+            className="masterpieces"
+            itemLayout="horizontal"
+            dataSource={this.props.data}
+            renderItem={item => (
+              <List.Item>
+                <List.Item.Meta title={item.title} description={item.year} />
+              </List.Item>
+            )}
+          />
         </>
       );
     }
@@ -33,4 +30,3 @@ Masterpieces.propTypes = {
 };
 
 export default Masterpieces;
-

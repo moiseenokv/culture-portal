@@ -6,10 +6,10 @@ import '../styles/writers.css';
 import WriterPreview from './writerPreview';
 
 const WriterList = ({ t, writers, colAmount = 4 }) => {
-  const col = [];// подмассив в котором будут массивы по colAmount элемента.
+  const col = []; // подмассив в котором будут массивы по colAmount элемента.
   let i = 0;
   while (i < writers.length) {
-    col.push(writers.slice(i, i += colAmount));
+    col.push(writers.slice(i, (i += colAmount)));
   }
 
   return (
@@ -20,7 +20,7 @@ const WriterList = ({ t, writers, colAmount = 4 }) => {
             {items.map((item, j) => (
               <Col xs={24} sm={12} md={8} lg={6} key={j}>
                 <WriterPreview {...item} t={t} />
-                <Divider className="show-small author-devider"/>
+                <Divider className="show-small author-devider" />
               </Col>
             ))}
           </Row>

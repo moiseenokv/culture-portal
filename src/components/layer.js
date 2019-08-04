@@ -14,14 +14,14 @@ const Layer = ({ children, path, t }) => {
       <main>{children}</main>
       <Footer>
         <Row>
-          <Col className='rights' span={8}>RSSchool <span>&copy;</span>2019 | Created by Team 14.</Col>
-          <Col className='contribution' span={8} offset={8}>
+          <Col className="rights" span={8}>
+            RSSchool <span>&copy;</span>2019 | Created by Team 14.
+          </Col>
+          <Col className="contribution" span={8} offset={8}>
             <a
-              href={
-                `https://docs.google.com/spreadsheets/d/1_HYtfPoTEGPdKPDmKHn8llA4757YDZpWdh7JNcFt03I/edit#gid=569398064`
-              }
+              href={`https://docs.google.com/spreadsheets/d/1_HYtfPoTEGPdKPDmKHn8llA4757YDZpWdh7JNcFt03I/edit#gid=569398064`}
               rel="noopener noreferrer"
-              target='_blank'
+              target="_blank"
             >
               Workflow
             </a>

@@ -20,29 +20,31 @@ class Writers extends Component {
 
   static getDerivedStateFromProps(props) {
     const initialData = props.data.allDataJson.edges.map(({ node }) => {
-      return Object.assign({ title: node.title2 }, JSON.parse(node.snippet))
+      return Object.assign({ title: node.title2 }, JSON.parse(node.snippet));
     });
 
     return {
       data: initialData,
-    }
+    };
   }
 
   componentDidMount() {
     const { data } = this.state;
     this.setState({
       search: data,
-    })
+    });
   }
 
-  handleSearch = (e) => {
+  handleSearch = e => {
     let search = e.target.value;
     const { data } = this.state;
 
     search = search.toLowerCase();
-    const result = data.filter(({ fullName, birthCity }) =>
-      fullName.toLowerCase().includes(search)
-      || birthCity.toLowerCase().includes(search));
+    const result = data.filter(
+      ({ fullName, birthCity }) =>
+        fullName.toLowerCase().includes(search) ||
+        birthCity.toLowerCase().includes(search)
+    );
 
     this.setState({ search: result });
   };
@@ -50,20 +52,20 @@ class Writers extends Component {
   static propTypes = {
     data: PropTypes.objectOf(PropTypes.object),
     t: PropTypes.func,
-  }
+  };
 
   render() {
     const { t } = this.props;
     const { search } = this.state;
     return (
-      <Layout className='layer'>
-        <Layer path='/writers' t={t}>
-          <Layout.Content className='content'>
-            <div className='content-wrapper'>
+      <Layout className="layer">
+        <Layer path="/writers" t={t}>
+          <Layout.Content className="content">
+            <div className="content-wrapper">
               <h1>{t('writersTitle')}</h1>
               <input
                 className="search"
-                placeholder='search by name and place of birth'
+                placeholder="search by name and place of birth"
                 onChange={this.handleSearch}
               />
               <WriterList writers={search} t={t} />
@@ -75,21 +77,15 @@ class Writers extends Component {
   }
 }
 
-
 export const query = graphql`
   query($lng: String!) {
     locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
       ...TranslationFragment
     }
     allDataJson(
-    filter: {language: {eq: $lng}},
-    sort: {
-      fields: [
-        title2
-      ]
-      order: ASC
-    }
-  ) {
+      filter: { language: { eq: $lng } }
+      sort: { fields: [title2], order: ASC }
+    ) {
       edges {
         node {
           title2

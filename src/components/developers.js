@@ -20,6 +20,6 @@ const Developers = ({ t }) => (
 
 Developers.propTypes = {
   t: PropTypes.func.isRequired,
-}
+};
 
 export default Developers;
