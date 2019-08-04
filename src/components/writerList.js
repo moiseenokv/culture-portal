@@ -18,12 +18,12 @@ const WriterList = ({ t, writers, colAmount = 4 }) => {
         <div key={i}>
           <Row gutter={16}>
             {items.map((item, j) => (
-              <Col span={6} key={j}>
+              <Col xs={24} sm={12} md={8} lg={6} key={j}>
                 <WriterPreview {...item} t={t} />
+                <Divider className="show-small author-devider"/>
               </Col>
             ))}
           </Row>
-          <Divider />
         </div>
       ))}
     </div>

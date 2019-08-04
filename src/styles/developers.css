@@ -1,6 +1,7 @@
 .developer-card {
   border: 1px solid rgb(180, 174, 174);
   background: rgb(205, 216, 211);
+  margin: 5px 0;
 }
 
 .developer-card:hover {
@@ -10,10 +11,10 @@
 }
 
 .developer-card p {
-  margin-top: 15px;
   font-size: 16px;
   font-weight: bold;
-  color: rgb(23, 2, 139);
+  color: rgb(79, 78, 86);
+  margin: 10px;
 }
 
 .developer-card img {
@@ -51,4 +52,26 @@
 
 .developers > div {
   padding: 0 5px;
+}
+
+@media (max-width: 500px) {
+  .developer-card p {
+    font-size: 3.5vw;
+    margin: 3vw 0;
+  }
+
+  .developer-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .developer-card span {
+    font-size: 3vw;
+    margin: 2vw 0;
+  }
+
+  .github img {
+    width: 25px;
+    height: 25px;
+  }
 }

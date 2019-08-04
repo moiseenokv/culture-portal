@@ -21,10 +21,10 @@ class Header extends Component {
         <Layout className='layout'>
           <Layout.Header>
             <Row>
-              <Col span={4}>
+              <Col xs={7} sm={4}  >
                 <LanguageSwitcher />
               </Col>
-              <Col span={20}>
+              <Col xs={17} sm={20} >
                 <Menu
                   theme='dark'
                   mode='horizontal'

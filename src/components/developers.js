@@ -9,8 +9,8 @@ import TEAM_DATA from '../data/team';
 
 const Developers = ({ t }) => (
   <div style={{ textAlign: 'center' }}>
-    <div className="developers-header">{t('developersTitle')}</div>
-    <Row className="developers">
+    <h3 className="developers-header">{t('developersTitle')}</h3>
+    <Row className="developers" gutter={16} type="flex" justify="center">
       {TEAM_DATA.map(devData => (
         <Developer {...devData} key={devData.login} />
       ))}

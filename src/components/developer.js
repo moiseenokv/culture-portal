@@ -7,7 +7,7 @@ import '../styles/developers.css';
 import github from '../images/github.png';
 
 const Developer = (props) => (
-  <Col span={4}>
+  <Col xs={12} sm={8} md={6} lg={6} xl={4}>
     <div className="developer-card">
       <a href={`https://github.com/${props.login}`} rel="noopener noreferrer" target='_blank'>
         <p>{props.name}</p>

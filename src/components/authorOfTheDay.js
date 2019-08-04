@@ -8,14 +8,15 @@ import '../styles/main.css';
 const AuthorOfTheDay = ({ data, t }) => (
   <>
     <h2 className='author-of-the-day'>{t('authorOfTheDay')}</h2>
-    <Layout className="layout">
+    <Layout className="layout author-of-the-day">
       <Link to={`/${data.title}`}>
-        <Row type='flex' justify='center'>
-          <Col span={4}>
+        <Row>
+          <Col xs={24} sm={24} md={8} lg={6} xl={4}>
+            <h3 className="show-small">{data.fullName}</h3>
             <img className='author-of-the-day-img' alt={data.fullName} src={data.photo} />
           </Col>
-          <Col span={16} offset={1}>
-            <h3>{data.fullName}</h3>
+          <Col xs={24} sm={24} md={14} lg={16} xl={18} offset={1} className="about-autor-of-day">
+            <h3 className="hide-small">{data.fullName}</h3>
             <p className="life-dates">{`${data.birthDate} - ${data.deathDate}`}</p>
             <p>{data.description}</p>
           </Col>

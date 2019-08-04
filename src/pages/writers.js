@@ -66,7 +66,6 @@ class Writers extends Component {
                 placeholder='search by name and place of birth'
                 onChange={this.handleSearch}
               />
-              <Divider />
               <WriterList writers={search} t={t} />
             </div>
           </Layout.Content>
