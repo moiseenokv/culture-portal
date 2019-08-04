@@ -65,7 +65,7 @@ class Writers extends Component {
               <h1>{t('writersTitle')}</h1>
               <input
                 className="search"
-                placeholder="search by name and place of birth"
+                placeholder={t("searchPlaceholder")}
                 onChange={this.handleSearch}
               />
               <WriterList writers={search} t={t} />
