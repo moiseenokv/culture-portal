@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const TimeLine = ({ data, t }) => {
 
-  const timelineItem = (item) => {
+  const timelineItem = (item, i) => {
     return (
-      <Timeline.Item>
+      <Timeline.Item key={i}>
         <div>{item.period}</div>
         <div>{item.description}</div>
       </Timeline.Item>
