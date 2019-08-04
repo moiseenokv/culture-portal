@@ -11,6 +11,7 @@ import MyVideo from './videoWidget';
 import MyMap from './mapWidget';
 import TimeLine from './timeLine';
 import Gallery from './gallery';
+import Masterpieces from './masterpieces';
 
 import '../styles/author.css';
 
